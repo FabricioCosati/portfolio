@@ -1,0 +1,373 @@
+package partials
+
+templ HomeMain(texts map[string]string, links map[string]string, testimonials map[string]string) {
+	<main class="flex-1 flex">
+		<div class="flex-1 flex justify-center items-center mt-5 md:mt-0">
+			<main class="flex-1 text-white">
+				<article class="flex-1 flex items-center justify-between mt-[5vh] animate-fadeUpTitle">
+					<div class="inline-block">
+						<div class="text-center mt-10">
+							<p class="font-text font-bold max-sm:text-left text-orange-400 pb-2">{ texts["Welcome"] }</p>
+							<h1 class="font-title font-bold text-6xl max-sm:text-left flex items-baseline text-center">
+								<p>Fabricio Cosati<span class="font-thin animate-blink">_</span></p>
+							</h1>
+						</div>
+						<div class="mt-8">
+							<p class="font-text font-thin text-white">
+								{ texts["FirstPartSubtitle"] }
+								<span class="font-bold text-orange-400">{ texts["SecondPartSubtitle"] }</span>
+								{ texts["ThirdPartSubtitle"] }
+							</p>
+						</div>
+						<div class="mt-8 flex flex-row">
+							<a class="text-sm" href={ templ.SafeURL(links["github_url"]) } target="_blank">
+								<button class="bg-slate-900 px-3 py-[5px] rounded-md inline-flex font-title font-medium hover:bg-slate-800">
+									<span class="inline-flex self-center mr-3"><i class="fa-brands fa-github max-sm:text-sm text-orange-400"></i></span>
+									Github
+								</button>
+							</a>
+							<a class="text-sm ml-5" href={ templ.SafeURL(links["linkedin_url"]) } target="_blank">
+								<button class="bg-slate-900 px-3 py-[5px] rounded-md inline-flex font-title font-medium hover:bg-slate-800">
+									<span class="inline-flex self-center mr-3">
+										<i class="fa-brands fa-linkedin max-sm:text-sm text-orange-400"></i>
+									</span>
+									Linkedin
+								</button>
+							</a>
+						</div>
+						<div class="mt-12">
+							<a href={ templ.SafeURL(links["resume_url"]) } target="_blank">
+								<button class="bg-slate-900 px-5 py-3 rounded-lg inline-flex font-title font-medium hover:bg-slate-800">
+									<span class="inline-flex self-center mr-3">
+										<i class="fa-solid fa-file-pdf max-sm:text-base text-orange-400"></i>
+									</span>
+									{ texts["Resume"] }
+								</button>
+							</a>
+						</div>
+					</div>
+					<div>
+						<img class="max-sm:hidden" src="/img/office.png" alt="foto"/>
+					</div>
+				</article>
+				<article class="pt-16 mt-18 animate-fadeUp [animation-timeline:view()] [animation-range:entry_0px_cover_600px]">
+					<div class="place-items-start">
+						<h3 class="text-xl font-title font-bold">
+							<i class="fa-regular fa-user max-sm:text-sm text-orange-400"></i>
+							{ texts["About"] }
+						</h3>
+					</div>
+					<div class="py-8">
+						<div class="grid max-sm:grid-rows-2 max-sm:gap-8 md:grid-cols-2 place-items-center">
+							<div class="align-text-top text-base max-sm:text-sm">
+								<div class="align-text-top font-text">
+									<p class="">
+										{ texts["AboutFirstParagraph"] }
+									</p>
+									<p id="AboutSecondParagraph" class="pt-4">
+										{ texts["AboutSecondParagraph"] }
+									</p>
+									<p class="pt-4">
+										{ texts["AboutThirdParagraph"] }
+									</p>
+								</div>
+							</div>
+							<div>
+								<img class="w-[250px] rounded-full" src="/img/photo.png" alt="foto"/>
+							</div>
+						</div>
+					</div>
+				</article>
+				<article class="pt-16 mt-18 animate-fadeUp [animation-timeline:view()] [animation-range:entry_0px_cover_600px]">
+					<div class="place-items-start">
+						<h3 class="text-xl font-title font-bold">
+							<i class="fa-solid fa-plane max-sm:text-sm text-orange-400"></i>
+							{ texts["MyJourney"] }
+						</h3>
+					</div>
+					<div class="relative py-8">
+						<div class="before:bg-slate-900 before:h-[90%] before:absolute before:w-[4px]">
+							<div class="flex relative py-1">
+								<div class="-ml-4 mt-12 bg-slate-900 rounded-full left-0 absolute top-0 w-[35px] h-[35px]">
+									<div class="flex items-center justify-center h-full">
+										<i class="fa-solid fa-briefcase max-sm:text-base text-orange-400"></i>
+									</div>
+								</div>
+								<div class="ml-8 pb-8">
+									<div class="w-60 h-40 group relative">
+										<div class="relative">
+											<div class="ml-2 font-text">
+												<div class="w-[150px] h-[50px] mb-2">
+													<img class="object-contain object-left w-full h-full" src="/img/logo-celcoin.jpeg" alt="Celcoin"/>
+												</div>
+												<div class="leading-none mb-1">
+													<h3>
+														<span class="font-bold font-title">Celcoin</span>
+													</h3>
+													<h4 class="py-1">
+														<span class="text-xs">Jun 2022 - { texts["PresentTime"] }</span>
+													</h4>
+													<h4>
+														<span class="text-xs">{ texts["CelcoinPosition"] }</span>
+													</h4>
+												</div>
+												<div>
+													<span class="max-sm:text-sm">
+														<i class="fa-solid fa-location-dot text-orange-400"></i>
+														{ texts["Location"] }
+													</span>
+												</div>
+											</div>
+											<div class="rounded-md w-full h-full absolute top-0 group-hover:bg-slate-900/95 transition-all duration-300 ease-in-out">
+												<div class="px-2 py-1 hidden group-hover:block transition-all duration-300 ease-in-out">
+													<span class="max-sm:text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos aliquam</span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="flex relative py-1">
+								<div class="-ml-4 mt-12 bg-slate-900 rounded-full left-0 absolute top-0 w-[35px] h-[35px]">
+									<div class="flex items-center justify-center h-full">
+										<i class="fa-solid fa-briefcase max-sm:text-base text-orange-400"></i>
+									</div>
+								</div>
+								<div class="ml-8 pb-8">
+									<div class="w-60 h-40 group relative">
+										<div class="relative">
+											<div class="ml-2 font-text">
+												<div class="w-[150px] h-[50px] mb-1">
+													<img class="object-contain object-left w-full h-full" src="/img/logo-escalar.png" alt="Escalar Comunicação e Marketing"/>
+												</div>
+												<div class="leading-none mb-1">
+													<h3>
+														<span class="font-bold font-title">Escalar Comunicação</span>
+													</h3>
+													<h4 class="py-1">
+														<span class="text-xs">Jan 2022 - Jun 2022</span>
+													</h4>
+													<h4>
+														<span class="text-xs">{ texts["EscalarPosition"] }</span>
+													</h4>
+												</div>
+												<div>
+													<span class="max-sm:text-sm">
+														<i class="fa-solid fa-location-dot text-orange-400"></i>
+														{ texts["Location"] }
+													</span>
+												</div>
+											</div>
+											<div class="rounded-md w-full h-full absolute top-0 group-hover:bg-slate-900/95 transition-all duration-300 ease-in-out">
+												<div class="px-2 py-1 hidden group-hover:block transition-all duration-300 ease-in-out">
+													<span class="max-sm:text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos aliquam</span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="flex relative py-1">
+								<div class="-ml-4 mt-12 bg-slate-900 rounded-full left-0 absolute top-0 w-[35px] h-[35px]">
+									<div class="flex items-center justify-center h-full">
+										<i class="fa-solid fa-graduation-cap max-sm:text-base text-orange-400"></i>
+									</div>
+								</div>
+								<div class="ml-8 pb-8">
+									<div class="w-60 h-40 group relative">
+										<div class="relative">
+											<div class="ml-2 font-text">
+												<div class="w-[150px] h-[50px] mb-1">
+													<img class="object-contain object-left w-full h-full" src="/img/logo-una.jpeg" alt="Una"/>
+												</div>
+												<div class="leading-none mb-1">
+													<h3>
+														<span class="font-bold font-title">{ texts["CollegeName"] }</span>
+													</h3>
+													<h4 class="py-1">
+														<span class="text-xs">2019 - 2022</span>
+													</h4>
+													<h4>
+														<span class="text-xs">{ texts["CollegeDegree"] }</span>
+													</h4>
+												</div>
+												<div>
+													<span class="max-sm:text-sm">
+														<i class="fa-solid fa-location-dot text-orange-400"></i>
+														{ texts["Location"] }
+													</span>
+												</div>
+											</div>
+											<div class="rounded-md w-full h-full absolute top-0 group-hover:bg-slate-900/95 transition-all duration-300 ease-in-out">
+												<div class="px-2 py-1 hidden group-hover:block transition-all duration-300 ease-in-out">
+													<span class="max-sm:text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos aliquam</span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</article>
+				<article class="pt-16 mt-18 animate-fadeUp [animation-timeline:view()] [animation-range:entry_0px_cover_600px]">
+					<div class="place-items-start">
+						<h3 class="text-xl font-title font-bold">
+							<i class="fa-solid fa-code max-sm:text-sm text-orange-400"></i>
+							{ texts["Skills"] }
+						</h3>
+					</div>
+					<div class="py-8">
+						<div>
+							<h4 class="pb-6 font-title">{ texts["FrontendDevelopment"] }</h4>
+							<div class="grid grid-cols-3 gap-4 justify-items-center items-center">
+								<div class="tooltip w-[40px]" data-tip="Html">
+									<img src="/img/html.svg" alt="Html"/>
+								</div>
+								<div class="tooltip w-[40px]" data-tip="Css">
+									<img src="/img/css.svg" alt="Css"/>
+								</div>
+								<div class="tooltip w-[40px]" data-tip="Javascript">
+									<img src="/img/javascript.svg" alt="Javascript"/>
+								</div>
+								<div class="tooltip w-[40px]" data-tip="Typescript">
+									<img src="/img/typescript.svg" alt="Typescript"/>
+								</div>
+								<div class="tooltip w-[40px]" data-tip="React">
+									<img src="/img/react.svg" alt="React"/>
+								</div>
+								<div class="tooltip w-[40px] relative" data-tip="NextJs">
+									<div class="absolute w-full h-[40px]"></div>
+									<img src="/img/next-js.svg" alt="NextJs"/>
+								</div>
+								<div class="tooltip w-[40px]" data-tip="Tailwind">
+									<img src="/img/tailwind.svg" alt="Tailwind"/>
+								</div>
+								<div class="tooltip w-[40px]" data-tip="Bootstrap">
+									<img src="/img/bootstrap.svg" alt="Bootstrap"/>
+								</div>
+								<div class="tooltip w-[40px]" data-tip="Scss">
+									<img src="/img/scss.svg" alt="Scss"/>
+								</div>
+							</div>
+						</div>
+						<div class="py-6">
+							<h4 class="pb-6 font-title">{ texts["BackendDevelopment"] }</h4>
+							<div class="grid grid-cols-3 gap-4 justify-items-center items-center">
+								<div class="tooltip w-[40px]" data-tip="Php">
+									<img src="/img/php.svg" alt="Php"/>
+								</div>
+								<div class="tooltip w-[40px]" data-tip="Laravel">
+									<img src="/img/laravel.svg" alt="Laravel"/>
+								</div>
+								<div class="tooltip w-[40px]" data-tip="Go">
+									<img src="/img/go.svg" alt="Go"/>
+								</div>
+								<div class="tooltip w-[40px]" data-tip="Typescript">
+									<img src="/img/typescript.svg" alt="Typescript"/>
+								</div>
+								<div class="tooltip w-[40px]" data-tip="Gin Gonic">
+									<img src="/img/gin-gonic.svg" alt="Gin Gonic"/>
+								</div>
+								<div class="tooltip w-[40px]" data-tip="Python">
+									<img src="/img/python.svg" alt="Python"/>
+								</div>
+								<div class="tooltip w-[40px]" data-tip="NodeJs">
+									<img src="/img/node-js.svg" alt="NodeJs"/>
+								</div>
+							</div>
+						</div>
+						<div class="py-6">
+							<h4 class="pb-6 font-title">{ texts["CloudInfra"] }</h4>
+							<div class="grid grid-cols-3 gap-4 justify-items-center items-center">
+								<div class="tooltip w-[40px]" data-tip="Aws">
+									<img src="/img/aws.svg" alt="Aws"/>
+								</div>
+								<div class="tooltip w-[40px]" data-tip="Docker">
+									<img src="/img/docker.svg" alt="Docker"/>
+								</div>
+								<div class="tooltip w-[40px]" data-tip="Mysql">
+									<img src="/img/mysql.svg" alt="Mysql"/>
+								</div>
+							</div>
+						</div>
+					</div>
+				</article>
+				<article class="pt-16 mt-18 animate-fadeUp [animation-timeline:view()] [animation-range:entry_0px_cover_600px] mb-60">
+					<div class="place-items-start">
+						<h3 class="text-xl font-title font-bold">
+							<i class="fa-solid fa-comment-dots max-sm:text-sm text-orange-400"></i>
+							{ texts["Testimonials"] }
+						</h3>
+					</div>
+					<div class="py-8">
+						<div class="bg-slate-900/50 shadow-md shadow-slate-800/30 p-4 rounded-md">
+							<div class="flex w-full mb-8">
+								<div class="flex items-center justify-center">
+									<img class="max-sm:w-[50px] w-[90px] rounded-full" src="/img/testimonials_01.jpg" alt="foto"/>
+								</div>
+								<div class="pl-4 w-full font-text">
+									<p class="text-lg font-title">Rafael Rilen</p>
+									<p class="text-xs">{ testimonials["Testimonial01Date"] }</p>
+								</div>
+							</div>
+							<div class="text-sm font-text">
+								<p>
+									{ testimonials["Testimonial01Text01"] }
+								</p>
+								<p class="pt-4">
+									{ testimonials["Testimonial01Text02"] }
+								</p>
+							</div>
+						</div>
+						<div class="bg-slate-900/50 shadow-md shadow-slate-800/30 p-4 rounded-md my-12">
+							<div class="flex w-full mb-8">
+								<div class="flex items-center justify-center">
+									<img class="max-sm:w-[50px] w-[90px] rounded-full" src="/img/testimonials_02.jpg" alt="foto"/>
+								</div>
+								<div class="pl-4 w-full font-text">
+									<p class="text-lg font-title">Ryan Souza</p>
+									<p class="text-xs">{ testimonials["Testimonial02Date"] }</p>
+								</div>
+							</div>
+							<div class="text-sm font-text">
+								<p>
+									{ testimonials["Testimonial02Text01"] }
+								</p>
+							</div>
+						</div>
+						<div class="bg-slate-900/50 shadow-md shadow-slate-800/30 p-4 rounded-md">
+							<div class="flex w-full mb-8">
+								<div class="flex items-center justify-center">
+									<img class="max-sm:w-[50px] w-[90px] rounded-full" src="/img/testimonials_03.jpg" alt="foto"/>
+								</div>
+								<div class="pl-4 w-full font-text">
+									<p class="text-lg font-title">Tales Andena</p>
+									<p class="text-xs">{ testimonials["Testimonial03Date"] }</p>
+								</div>
+							</div>
+							<div class="text-sm font-text">
+								<p>
+									{ testimonials["Testimonial03Text01"] }
+								</p>
+								<p class="pt-4">
+									{ testimonials["Testimonial03Text02"] }
+								</p>
+							</div>
+						</div>
+					</div>
+				</article>
+			</main>
+		</div>
+	</main>
+	<script>
+        const highlightWords = "cel_cash";
+        const content = document.getElementById("AboutSecondParagraph");
+
+		const celCashUrl = "https://www.celcoin.com.br/cel_cash/"
+        content.innerHTML = content.innerHTML.replace(
+            new RegExp(`(${highlightWords})`, 'g'), 
+            `<a class="text-orange-400" href="${celCashUrl}" target="_blank">$1</a>`
+        );
+    </script>
+}

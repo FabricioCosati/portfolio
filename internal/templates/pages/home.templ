@@ -1,0 +1,15 @@
+package pages
+
+import (
+	dto "github.com/fabricio-cosati/portfolio/cmd/dto"
+	"github.com/fabricio-cosati/portfolio/internal/templates/partials"
+	"github.com/fabricio-cosati/portfolio/internal/templates/shared"
+)
+
+templ Home(title string, links map[string]string, texts map[string]string, testimonials map[string]string, languages dto.LanguagesCollection, current_lang string) {
+	@shared.Main(title) {
+		@partials.Header(languages, current_lang)
+		@partials.HomeMain(texts, links, testimonials)
+		@partials.Footer()
+	}
+}

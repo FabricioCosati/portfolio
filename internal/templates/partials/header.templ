@@ -1,0 +1,41 @@
+package partials
+
+import dto "github.com/fabricio-cosati/portfolio/cmd/dto"
+
+templ Header(languages dto.LanguagesCollection, current_lang string) {
+	<header class="fixed bg-slate-950 inset-x-0 z-[1]">
+		<div class="items-center p-4">
+			<form action="/change-lang" method="POST">
+				<div id="dropdownLanguageButton" class="w-[120px] relative bg-slate-900 text-white text-xs rounded-md">
+					<div class="pl-4 pr-3 py-2 rounded-sm text-center cursor-pointer flex justify-between" onclick="toggleDropdown()">
+						for _, language := range languages.Languages {
+							if (current_lang == language.Acronym) {
+								<span class="content-center">
+									{ language.Name }
+								</span>
+								<img class=" rounded-full w-[20px]" src={ language.Image } alt={ language.Acronym }/>
+							}
+						}
+					</div>
+					<div id="dropdownLanguage" class="rounded border-[1px] border-slate-800 bg-slate-800 absolute w-full shadow-sm hidden">
+						for _, language := range languages.Languages {
+							if (current_lang != language.Acronym) {
+								<button class="flex justify-between cursor-pointer hover:bg-slate-700 p-3 w-full" type="submit" name="language" value={ language.Acronym }>
+									<span class="content-center">{ language.Name }</span>
+									<img class="rounded-full w-[20px]" src={ language.Image } alt={ language.Acronym }/>
+								</button>
+							}
+						}
+					</div>
+				</div>
+			</form>
+		</div>
+		<div class="flex-grow border-t border-gray-800"></div>
+	</header>
+	<script>
+		function toggleDropdown() {
+			let dropdownLanguage = document.querySelector("#dropdownLanguageButton #dropdownLanguage");
+			dropdownLanguage.classList.toggle("hidden")
+		}
+	</script>
+}
