@@ -20,6 +20,7 @@ jobs:
           echo "SMTP_PORT=${{ secrets.SMTP_PORT }}" >> .env
           echo "SMTP_USERNAME=${{ secrets.SMTP_USERNAME }}" >> .env
           echo "SMTP_PASSWORD=${{ secrets.SMTP_PASSWORD }}" >> .env
+          
         
       - name: Install go dependencies
         run: |
@@ -37,6 +38,10 @@ jobs:
 
       - name: Start Server
         run: |
-          go build -o server ./cmd/server
-          echo "Success"
-          
+          /home/runner/go/bin/air -c .air.toml
+
+      - name: Deploy gh
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./internal
