@@ -1,0 +1,13 @@
+package pages
+
+import (
+	"github.com/fabricio-cosati/portfolio/cmd/dto"
+	"github.com/fabricio-cosati/portfolio/internal/templates/partials"
+	"github.com/fabricio-cosati/portfolio/internal/templates/shared"
+)
+
+templ Email(title string, email dto.Email) {
+	@shared.Main(title) {
+		@partials.EmailBody(email)
+	}
+}
