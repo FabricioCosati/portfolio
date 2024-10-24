@@ -32,15 +32,8 @@ jobs:
       - name: Install air
         run: |
           go install github.com/air-verse/air@latest
-          echo "Air at: $(go env GOPATH)/bin/air"
           export PATH=$PATH:$(go env GOPATH)/bin
-          echo "PATH: $PATH"
-
-      - name: Verify air
-        run: |
-          which air
-          air -v
 
       - name: Start Server
         run: |
-          air -c .air.toml
+          /home/runner/go/bin/air -c .air.toml
