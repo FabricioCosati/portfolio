@@ -37,4 +37,6 @@ jobs:
 
       - name: Start Server
         run: |
-          /home/runner/go/bin/air -c .air.toml
+          go build -o server ./cmd/server
+          echo "Success"
+          
