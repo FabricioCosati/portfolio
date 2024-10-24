@@ -1,0 +1,41 @@
+name: Continuos Integration
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  continuos-integration:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Configuring Workflow
+        uses: actions/checkout@v3
+
+      - name: Create .env
+        run: |
+          echo "ENV=prod" > .env
+          echo "SMTP_HOST=${{ secrets.SMTP_HOST }}" >> .env
+          echo "SMTP_PORT=${{ secrets.SMTP_PORT }}" >> .env
+          echo "SMTP_USERNAME=${{ secrets.SMTP_USERNAME }}" >> .env
+          echo "SMTP_PASSWORD=${{ secrets.SMTP_PASSWORD }}" >> .env
+        
+      - name: Install go dependencies
+        run: |
+          go mod tidy
+          go mod vendor
+      
+      - name: Install npm dependencies
+        run: |
+          npm install
+
+      - name: Install air
+        run: |
+          go install github.com/air-verse/air@latest
+          export PATH=$PATH:$(go env GOPATH)/bin
+
+      - name: Start Server
+        run: |
+          go build -o server ./cmd/server
+          echo "Success"
