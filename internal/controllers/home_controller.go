@@ -22,18 +22,8 @@ func RenderHomeHandler(c *fiber.Ctx) error {
 	localizer := c.Locals("localizer").(*i18n.Localizer)
 	initLocalizer := services.InitLocalize(*localizer, lang)
 
-	links := map[string]string{
-		"linkedin_url": "https://www.linkedin.com/in/fabricio-cosati/",
-		"github_url":   "https://github.com/FabricioCosati",
-		"resume_url":   "https://drive.google.com/file/d/11RoHBjxxVeiaqOMvQkuC3KlgbXDn3aU6/view",
-	}
-
-	languages := dto.LanguagesCollection{
-		Languages: []dto.Language{
-			{Name: "English", Acronym: "en", Image: "/img/us-flag.png"},
-			{Name: "Português", Acronym: "pt", Image: "/img/pt-flag.png"},
-		},
-	}
+	infoData := dto.GetInfoData()
+	LanguagesCollection := dto.GetSupportedLanguages()
 
 	texts, textsErr := initLocalizer.LoadHomeTexts()
 	if textsErr != nil {
@@ -47,5 +37,5 @@ func RenderHomeHandler(c *fiber.Ctx) error {
 		c.Status(500).SendString("Internal Server Error")
 	}
 
-	return fiber_reder.Render(c, pages.Home("Fabricio Cosati", links, texts, testimonials, languages, lang))
+	return fiber_reder.Render(c, pages.Home("Fabricio Cosati", *infoData, texts, testimonials, *LanguagesCollection, lang))
 }
