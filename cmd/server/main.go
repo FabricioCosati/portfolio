@@ -4,16 +4,29 @@ import (
 	"log"
 
 	fiber_middleware "github.com/fabricio-cosati/portfolio/cmd/middlewares"
+	"github.com/fabricio-cosati/portfolio/config"
 	"github.com/fabricio-cosati/portfolio/internal/routes"
 	"github.com/fabricio-cosati/portfolio/internal/services"
 	translator "github.com/fabricio-cosati/portfolio/internal/translations"
 	"github.com/gofiber/fiber/v2"
+	"github.com/joho/godotenv"
 )
 
 //go:generate goi18n extract -sourceLanguage en -outdir ../../internal/translations
 //go:generate goi18n merge -outdir ../../internal/translations ../../internal/translations/active.en.toml ../../internal/translations/translate.pt.toml
 //go:generate goi18n merge -sourceLanguage pt -outdir ../../internal/translations ../../internal/translations/active.pt.toml ../../internal/translations/translate.pt.toml
 func main() {
+	err := godotenv.Load()
+	if err != nil {
+		log.Fatalf("error loading environment variables: %v", err)
+	}
+
+	err = config.InitConfig()
+
+	if err != nil {
+		log.Fatalf("Failed to init environment: %v", err)
+	}
+
 	app := fiber.New()
 	app.Static("/public", "./internal/public")
 	app.Static("/img", "./internal/img")
@@ -28,6 +41,7 @@ func main() {
 
 	routes.AppendHomeRoutes(app)
 	routes.AppendLanguageRoutes(app)
+	routes.AppendSendEmailRoutes(app)
 
 	log.Fatal(app.Listen(":8080"))
 }
