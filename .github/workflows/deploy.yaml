@@ -37,4 +37,5 @@ jobs:
 
       - name: Start Server
         run: |
-          timeout 60 /home/runner/go/bin/air -c .air.toml
+          go build -o server ./cmd/server
+          ./server
