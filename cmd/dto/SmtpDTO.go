@@ -11,6 +11,12 @@ type Credentials struct {
 	Password string
 }
 
+type Email struct {
+	Name    string `json:"name" form:"name"`
+	Email   string `json:"email" form:"email"`
+	Message string `json:"message" form:"message"`
+}
+
 func GetSmtpCredentials() *Credentials {
 
 	return &Credentials{
