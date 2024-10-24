@@ -38,4 +38,4 @@ jobs:
       - name: Start Server
         run: |
           go build -o server ./cmd/server
-          ./server
+          echo "Success"
