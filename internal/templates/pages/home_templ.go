@@ -9,12 +9,12 @@ import "github.com/a-h/templ"
 import templruntime "github.com/a-h/templ/runtime"
 
 import (
-	dto "github.com/fabricio-cosati/portfolio/cmd/dto"
+	"github.com/fabricio-cosati/portfolio/cmd/dto"
 	"github.com/fabricio-cosati/portfolio/internal/templates/partials"
 	"github.com/fabricio-cosati/portfolio/internal/templates/shared"
 )
 
-func Home(title string, links map[string]string, texts map[string]string, testimonials map[string]string, languages dto.LanguagesCollection, current_lang string) templ.Component {
+func Home(title string, links dto.InfoData, texts map[string]string, testimonials map[string]string, languages dto.LanguagesCollection, current_lang string) templ.Component {
 	return templruntime.GeneratedTemplate(func(templ_7745c5c3_Input templruntime.GeneratedComponentInput) (templ_7745c5c3_Err error) {
 		templ_7745c5c3_W, ctx := templ_7745c5c3_Input.Writer, templ_7745c5c3_Input.Context
 		if templ_7745c5c3_CtxErr := ctx.Err(); templ_7745c5c3_CtxErr != nil {
