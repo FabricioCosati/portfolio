@@ -2,6 +2,9 @@ package translations
 
 import "github.com/nicksnyder/go-i18n/v2/i18n"
 
+//go:generate goi18n extract -sourceLanguage en -outdir ./
+//go:generate goi18n merge -outdir ./ ./active.en.toml ./translate.pt.toml
+//go:generate goi18n merge -sourceLanguage pt -outdir ./ ./translate.pt.toml ./active.pt.toml
 func LoadHomeTexts() map[string]i18n.Message {
 	return map[string]i18n.Message{
 		"Welcome": {
@@ -87,6 +90,30 @@ func LoadHomeTexts() map[string]i18n.Message {
 		"Testimonials": {
 			ID:    "Testimonials",
 			Other: "Testimonials",
+		},
+		"Contact": {
+			ID:    "Contact",
+			Other: "Keep in Touch",
+		},
+		"Name": {
+			ID:    "Name",
+			Other: "Name",
+		},
+		"Message": {
+			ID:    "Message",
+			Other: "Message",
+		},
+		"SendMessage": {
+			ID:    "SendMessage",
+			Other: "Send Message",
+		},
+		"SuccessEmail": {
+			ID:    "SuccessEmail",
+			Other: "Email sent successfully",
+		},
+		"SuccessEmailDescription": {
+			ID:    "SuccessEmailDescription",
+			Other: "Thank you for getting in touch, I will reply as soon as possible",
 		},
 	}
 }
