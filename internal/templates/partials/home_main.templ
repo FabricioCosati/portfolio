@@ -11,7 +11,7 @@ templ HomeMain(texts map[string]string, links dto.InfoData, testimonials map[str
 						<div class="text-center mt-10">
 							<p class="font-text font-bold max-sm:text-left text-orange-400 pb-2">{ texts["Welcome"] }</p>
 							<h1 class="font-title font-bold text-6xl max-sm:text-left flex items-baseline text-center">
-								<p>Fabricio Cosati<span class="font-thin animate-blink">_</span></p>
+								<p>Fabricio! Cosati<span class="font-thin animate-blink">_</span></p>
 							</h1>
 						</div>
 						<div class="mt-8">
@@ -387,15 +387,15 @@ templ HomeMain(texts map[string]string, links dto.InfoData, testimonials map[str
 							<form id="sendEmail" action="/send-email" method="POST">
 								<div class="mt-12">
 									<label for="name" class="block mb-2 text-sm font-medium text-white font-title">{ texts["Name"] }</label>
-									<input type="text" name="name" placeholder={ texts["Name"] } required class="bg-slate-900 border-slate-700 text-white text-sm rounded-lg focus:ring-slate-900 focus:border-slate-500 block w-full p-2.5 font-text"/>
+									<input id="name" type="text" name="name" placeholder={ texts["Name"] } required class="bg-slate-900 border-slate-700 text-white text-sm rounded-lg focus:ring-slate-900 focus:border-slate-500 block w-full p-2.5 font-text"/>
 								</div>
 								<div class="mt-4">
 									<label for="email" class="block mb-2 text-sm font-medium text-white font-title">Email</label>
-									<input type="email" name="email" placeholder="Email" required class="bg-slate-900 border-slate-700 text-white text-sm rounded-lg focus:ring-slate-900 focus:border-slate-500 block w-full p-2.5 font-text"/>
+									<input id="email" type="email" name="email" placeholder="Email" required class="bg-slate-900 border-slate-700 text-white text-sm rounded-lg focus:ring-slate-900 focus:border-slate-500 block w-full p-2.5 font-text"/>
 								</div>
 								<div class="mt-4">
 									<label for="message" class="block mb-2 text-sm font-medium text-white font-title">{ texts["Message"] }</label>
-									<textarea name="message" placeholder={ texts["Message"] } class="bg-slate-900 border-slate-700 text-white text-sm rounded-lg focus:ring-slate-900 focus:border-slate-500 block w-full p-2.5 font-text max-sm:h-32"></textarea>
+									<textarea id="message" name="message" placeholder={ texts["Message"] } class="bg-slate-900 border-slate-700 text-white text-sm rounded-lg focus:ring-slate-900 focus:border-slate-500 block w-full p-2.5 font-text max-sm:h-32"></textarea>
 								</div>
 								<button type="submit" class="btn btn-active btn-neutral block w-full border-slate-700 bg-slate-900 hover:bg-slate-800 mt-8">{ texts["SendMessage"] }</button>
 							</form>
@@ -419,7 +419,37 @@ templ HomeMain(texts map[string]string, links dto.InfoData, testimonials map[str
             `<a class="text-orange-400" href="${celCashUrl}" target="_blank">$1</a>`
         );
 
-		function formSubmit(event) {
+		async function formSubmit(event) {
+			// event.preventDefault();
+
+			// const name = document.getElementById('name').value;
+			// const email = document.getElementById('email').value;
+			// const message = document.getElementById('message').value;
+
+			// const data = {
+			// 	name: name,
+			// 	email: email,
+			// 	message: message
+			// };
+
+			// try {
+			// 	const resp = await fetch("https://fabriciocosati.fly.dev/send-email", {
+			// 		method: "POST",
+			// 		headers: { 
+			// 			"Content-Type": "application/json"
+			// 		},
+			// 		body: JSON.stringify(data)
+			// 	})
+
+			// 	if (resp.ok) {
+			// 		const result = await resp.json();
+			// 		animateSuccessAlert()
+			// 	}
+			// } catch (err) {
+			// 	console.error(err)
+
+			// }
+
 			var url = "/send-email";
 			var request = new XMLHttpRequest();
 			request.open('POST', url, true);
@@ -446,5 +476,9 @@ templ HomeMain(texts map[string]string, links dto.InfoData, testimonials map[str
 		}
 
 		document.getElementById("sendEmail").addEventListener("submit", formSubmit);
+
+		// $.ajax({
+		// 	url: "https://fabriciocosati.fly.dev/send-email"
+		// })
     </script>
 }

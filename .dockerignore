@@ -1,0 +1,280 @@
+# flyctl launch added from .gitignore
+vendor
+node_modules
+**/tmp
+**/.env
+
+# flyctl launch added from vendor/github.com/BurntSushi/toml/.gitignore
+vendor/github.com/BurntSushi/toml/toml.test
+vendor/github.com/BurntSushi/toml/toml-test
+
+# flyctl launch added from vendor/github.com/a-h/templ/.gitignore
+# Output.
+vendor/github.com/a-h/templ/**/cmd/templ/templ
+
+# Logs.
+vendor/github.com/a-h/templ/**/cmd/templ/lspcmd/*log.txt
+
+# Go code coverage.
+vendor/github.com/a-h/templ/**/coverage.out
+vendor/github.com/a-h/templ/**/coverage
+
+# Mac filesystem jank.
+vendor/github.com/a-h/templ/**/.DS_Store
+
+# Docusaurus.
+vendor/github.com/a-h/templ/**/docs/build
+vendor/github.com/a-h/templ/**/docs/resources/_gen
+vendor/github.com/a-h/templ/**/node_modules
+vendor/github.com/a-h/templ/**/dist
+
+# Nix artifacts.
+vendor/github.com/a-h/templ/**/result
+
+# Editors
+## nvim
+vendor/github.com/a-h/templ/**/.null-ls*
+
+# Go workspace.
+vendor/github.com/a-h/templ/**/go.work
+
+# direnv
+vendor/github.com/a-h/templ/**/.direnv
+
+# flyctl launch added from vendor/github.com/allegro/bigcache/.gitignore
+vendor/github.com/allegro/bigcache/**/.idea
+vendor/github.com/allegro/bigcache/**/.DS_Store
+vendor/github.com/allegro/bigcache/server/server.exe
+vendor/github.com/allegro/bigcache/server/server
+vendor/github.com/allegro/bigcache/server/server_dar*
+vendor/github.com/allegro/bigcache/server/server_fre*
+vendor/github.com/allegro/bigcache/server/server_win*
+vendor/github.com/allegro/bigcache/server/server_net*
+vendor/github.com/allegro/bigcache/server/server_ope*
+vendor/github.com/allegro/bigcache/**/CHANGELOG.md
+
+# flyctl launch added from vendor/github.com/fsnotify/fsnotify/.gitignore
+# go test -c output
+vendor/github.com/fsnotify/fsnotify/**/*.test
+vendor/github.com/fsnotify/fsnotify/**/*.test.exe
+
+# Output of go build ./cmd/fsnotify
+vendor/github.com/fsnotify/fsnotify/fsnotify
+vendor/github.com/fsnotify/fsnotify/fsnotify.exe
+
+# flyctl launch added from vendor/github.com/gofiber/fiber/v2/.gitignore
+# Binaries for programs and plugins
+vendor/github.com/gofiber/fiber/v2/**/*.exe
+vendor/github.com/gofiber/fiber/v2/**/*.exe~
+vendor/github.com/gofiber/fiber/v2/**/*.dll
+vendor/github.com/gofiber/fiber/v2/**/*.so
+vendor/github.com/gofiber/fiber/v2/**/*.dylib
+
+# Test binary, built with `go test -c`
+vendor/github.com/gofiber/fiber/v2/**/*.test
+vendor/github.com/gofiber/fiber/v2/**/*.tmp
+
+# Output of the go coverage tool, specifically when used with LiteIDE
+vendor/github.com/gofiber/fiber/v2/**/*.out
+
+# IDE files
+vendor/github.com/gofiber/fiber/v2/**/.vscode
+vendor/github.com/gofiber/fiber/v2/**/.DS_Store
+vendor/github.com/gofiber/fiber/v2/**/.idea
+
+# Misc
+vendor/github.com/gofiber/fiber/v2/**/*.fiber.gz
+vendor/github.com/gofiber/fiber/v2/**/*.fasthttp.gz
+vendor/github.com/gofiber/fiber/v2/**/*.pprof
+vendor/github.com/gofiber/fiber/v2/**/*.workspace
+
+# Dependencies
+vendor/github.com/gofiber/fiber/v2/vendor
+vendor/github.com/gofiber/fiber/v2/**/vendor
+vendor/github.com/gofiber/fiber/v2/**/vendor
+vendor/github.com/gofiber/fiber/v2/Godeps
+
+# flyctl launch added from vendor/github.com/hashicorp/hcl/.gitignore
+vendor/github.com/hashicorp/hcl/**/y.output
+
+# ignore intellij files
+vendor/github.com/hashicorp/hcl/**/.idea
+vendor/github.com/hashicorp/hcl/**/*.iml
+vendor/github.com/hashicorp/hcl/**/*.ipr
+vendor/github.com/hashicorp/hcl/**/*.iws
+
+vendor/github.com/hashicorp/hcl/**/*.test
+
+# flyctl launch added from vendor/github.com/joho/godotenv/.gitignore
+vendor/github.com/joho/godotenv/**/.DS_Store
+
+# flyctl launch added from vendor/github.com/klauspost/compress/.gitignore
+# Compiled Object files, Static and Dynamic libs (Shared Objects)
+vendor/github.com/klauspost/compress/**/*.o
+vendor/github.com/klauspost/compress/**/*.a
+vendor/github.com/klauspost/compress/**/*.so
+
+# Folders
+vendor/github.com/klauspost/compress/**/_obj
+vendor/github.com/klauspost/compress/**/_test
+
+# Architecture specific extensions/prefixes
+vendor/github.com/klauspost/compress/**/*.[568vq]
+vendor/github.com/klauspost/compress/**/[568vq].out
+
+vendor/github.com/klauspost/compress/**/*.cgo1.go
+vendor/github.com/klauspost/compress/**/*.cgo2.c
+vendor/github.com/klauspost/compress/**/_cgo_defun.c
+vendor/github.com/klauspost/compress/**/_cgo_gotypes.go
+vendor/github.com/klauspost/compress/**/_cgo_export.*
+
+vendor/github.com/klauspost/compress/**/_testmain.go
+
+vendor/github.com/klauspost/compress/**/*.exe
+vendor/github.com/klauspost/compress/**/*.test
+vendor/github.com/klauspost/compress/**/*.prof
+vendor/github.com/klauspost/compress/s2/cmd/_s2sx/sfx-exe
+
+# Linux perf files
+vendor/github.com/klauspost/compress/**/perf.data
+vendor/github.com/klauspost/compress/**/perf.data.old
+
+# gdb history
+vendor/github.com/klauspost/compress/**/.gdb_history
+
+# flyctl launch added from vendor/github.com/klauspost/compress/huff0/.gitignore
+vendor/github.com/klauspost/compress/huff0/huff0-fuzz.zip
+
+# flyctl launch added from vendor/github.com/magiconair/properties/.gitignore
+vendor/github.com/magiconair/properties/**/*.sublime-project
+vendor/github.com/magiconair/properties/**/*.sublime-workspace
+vendor/github.com/magiconair/properties/**/*.un~
+vendor/github.com/magiconair/properties/**/*.swp
+vendor/github.com/magiconair/properties/**/.idea
+vendor/github.com/magiconair/properties/**/*.iml
+
+# flyctl launch added from vendor/github.com/pelletier/go-toml/v2/.gitignore
+vendor/github.com/pelletier/go-toml/v2/**/test_program/test_program_bin
+vendor/github.com/pelletier/go-toml/v2/**/fuzz
+vendor/github.com/pelletier/go-toml/v2/**/cmd/tomll/tomll
+vendor/github.com/pelletier/go-toml/v2/**/cmd/tomljson/tomljson
+vendor/github.com/pelletier/go-toml/v2/**/cmd/tomltestgen/tomltestgen
+vendor/github.com/pelletier/go-toml/v2/**/dist
+vendor/github.com/pelletier/go-toml/v2/**/tests
+
+# flyctl launch added from vendor/github.com/sagikazarmark/locafero/.gitignore
+vendor/github.com/sagikazarmark/locafero/.devenv
+vendor/github.com/sagikazarmark/locafero/.direnv
+vendor/github.com/sagikazarmark/locafero/.task
+vendor/github.com/sagikazarmark/locafero/bin
+vendor/github.com/sagikazarmark/locafero/build
+vendor/github.com/sagikazarmark/locafero/tmp
+vendor/github.com/sagikazarmark/locafero/var
+vendor/github.com/sagikazarmark/locafero/vendor
+
+# flyctl launch added from vendor/github.com/sagikazarmark/slog-shim/.gitignore
+vendor/github.com/sagikazarmark/slog-shim/.devenv
+vendor/github.com/sagikazarmark/slog-shim/.direnv
+vendor/github.com/sagikazarmark/slog-shim/.task
+vendor/github.com/sagikazarmark/slog-shim/build
+
+# flyctl launch added from vendor/github.com/spf13/afero/.gitignore
+vendor/github.com/spf13/afero/**/sftpfs/file1
+vendor/github.com/spf13/afero/**/sftpfs/test
+
+# flyctl launch added from vendor/github.com/spf13/cast/.gitignore
+# Compiled Object files, Static and Dynamic libs (Shared Objects)
+vendor/github.com/spf13/cast/**/*.o
+vendor/github.com/spf13/cast/**/*.a
+vendor/github.com/spf13/cast/**/*.so
+
+# Folders
+vendor/github.com/spf13/cast/**/_obj
+vendor/github.com/spf13/cast/**/_test
+
+# Architecture specific extensions/prefixes
+vendor/github.com/spf13/cast/**/*.[568vq]
+vendor/github.com/spf13/cast/**/[568vq].out
+
+vendor/github.com/spf13/cast/**/*.cgo1.go
+vendor/github.com/spf13/cast/**/*.cgo2.c
+vendor/github.com/spf13/cast/**/_cgo_defun.c
+vendor/github.com/spf13/cast/**/_cgo_gotypes.go
+vendor/github.com/spf13/cast/**/_cgo_export.*
+
+vendor/github.com/spf13/cast/**/_testmain.go
+
+vendor/github.com/spf13/cast/**/*.exe
+vendor/github.com/spf13/cast/**/*.test
+
+vendor/github.com/spf13/cast/**/*.bench
+
+# flyctl launch added from vendor/github.com/spf13/pflag/.gitignore
+vendor/github.com/spf13/pflag/**/.idea/*
+
+
+# flyctl launch added from vendor/github.com/spf13/viper/.gitignore
+vendor/github.com/spf13/viper/.devenv
+vendor/github.com/spf13/viper/.direnv
+vendor/github.com/spf13/viper/.idea
+vendor/github.com/spf13/viper/.pre-commit-config.yaml
+vendor/github.com/spf13/viper/bin
+vendor/github.com/spf13/viper/build
+vendor/github.com/spf13/viper/var
+vendor/github.com/spf13/viper/vendor
+
+# flyctl launch added from vendor/github.com/subosito/gotenv/.gitignore
+vendor/github.com/subosito/gotenv/**/*.test
+vendor/github.com/subosito/gotenv/**/*.out
+vendor/github.com/subosito/gotenv/**/annotate.json
+vendor/github.com/subosito/gotenv/**/profile.cov
+
+# flyctl launch added from vendor/github.com/valyala/fasthttp/.gitignore
+vendor/github.com/valyala/fasthttp/**/tags
+vendor/github.com/valyala/fasthttp/**/*.pprof
+vendor/github.com/valyala/fasthttp/**/*.fasthttp.gz
+vendor/github.com/valyala/fasthttp/**/*.fasthttp.br
+vendor/github.com/valyala/fasthttp/**/.idea
+vendor/github.com/valyala/fasthttp/**/.vscode
+vendor/github.com/valyala/fasthttp/**/.DS_Store
+vendor/github.com/valyala/fasthttp/**/vendor
+vendor/github.com/valyala/fasthttp/**/testdata/fuzz
+
+# flyctl launch added from vendor/go.uber.org/multierr/.gitignore
+vendor/go.uber.org/multierr/vendor
+vendor/go.uber.org/multierr/**/cover.html
+vendor/go.uber.org/multierr/**/cover.out
+vendor/go.uber.org/multierr/bin
+
+# flyctl launch added from vendor/golang.org/x/sys/unix/.gitignore
+vendor/golang.org/x/sys/unix/**/_obj
+vendor/golang.org/x/sys/unix/**/unix.test
+
+# flyctl launch added from vendor/gopkg.in/ini.v1/.gitignore
+vendor/gopkg.in/ini.v1/**/testdata/conf_out.ini
+vendor/gopkg.in/ini.v1/**/ini.sublime-project
+vendor/gopkg.in/ini.v1/**/ini.sublime-workspace
+vendor/gopkg.in/ini.v1/**/testdata/conf_reflect.ini
+vendor/gopkg.in/ini.v1/**/.idea
+vendor/gopkg.in/ini.v1/.vscode
+vendor/gopkg.in/ini.v1/**/.DS_Store
+
+# flyctl launch added from vendor/gopkg.in/mail.v2/.gitignore
+
+
+# Binaries for programs and plugins
+vendor/gopkg.in/mail.v2/**/*.exe
+vendor/gopkg.in/mail.v2/**/*.dll
+vendor/gopkg.in/mail.v2/**/*.so
+vendor/gopkg.in/mail.v2/**/*.dylib
+
+# Test binary, build with `go test -c`
+vendor/gopkg.in/mail.v2/**/*.test
+
+# Output of the go coverage tool, specifically when used with LiteIDE
+vendor/gopkg.in/mail.v2/**/*.out
+
+
+# IDE's
+vendor/gopkg.in/mail.v2/**/.idea
+fly.toml
