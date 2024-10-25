@@ -35,21 +35,3 @@ jobs:
         run: |
           go install github.com/air-verse/air@latest
           export PATH=$PATH:$(go env GOPATH)/bin
-
-      - name: Start Server
-        run: |
-          mkdir -p public 
-          cp -r internal/img public/
-          cp -r internal/public/* public/
-
-          echo "<!DOCTYPE html>" > public/index.html
-          echo "<html><head><title>Meu Site</title></head>" >> public/index.html
-          echo "<body><h1>Site Gerado com Go!</h1></body></html>" >> public/index.html
-
-          ls public/  # Lista o conteúdo da pasta public para conferência
-
-      - name: Deploy gh
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./public
