@@ -21,7 +21,6 @@ RUN apt-get update && apt-get install -y \
 WORKDIR /usr/src/app
 COPY --from=builder /run-app /usr/local/bin/
 COPY --from=builder /usr/src/app/config ./config/
-COPY --from=builder /usr/src/app/internal/translations ./internal/translations/ 
-COPY --from=builder /usr/src/app/internal/templates ./internal/templates/ 
+COPY --from=builder /usr/src/app/internal/ ./internal/ 
 
 CMD ["run-app"]
