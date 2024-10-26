@@ -1,5 +1,29 @@
 package partials
 
-templ Footer() {
-	<footer class="mt-12"></footer>
+templ Footer(texts map[string]string) {
+	<footer class="bg-slate-950 w-full text-white text-center mt-20 h-20">
+		<div class="flex-grow border-t border-gray-800"></div>
+		<div id="footerText" class="pt-8 pb-12 justify-self-center text-sm max-sm:text-[13px]">
+			<p>
+				{ texts["FooterFirstParagraph"] }
+			</p>
+			<p>
+				{ texts["FooterSecondParagraph"] }
+			</p>
+			<p>
+				{ texts["FooterThirdParagraph"] }
+			</p>
+		</div>
+	</footer>
+	<script>
+		const highlightWords = ["Golang", "Tailwind", "Fly.io"];
+        const footer = document.getElementById("footerText");
+
+		for (let i = 0; i < highlightWords.length; i++) {
+			footer.innerHTML = footer.innerHTML.replace(
+				new RegExp(`(${highlightWords[i]})`, 'g'), 
+				`<span class="text-orange-400">$1</span>`
+			);
+		}
+	</script>
 }

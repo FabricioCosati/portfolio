@@ -3119,6 +3119,10 @@ html {
   z-index: 1;
 }
 
+.z-\[-1\] {
+  z-index: -1;
+}
+
 .m-0 {
   margin: 0px;
 }
@@ -3197,6 +3201,10 @@ html {
   margin-left: 1.5rem;
 }
 
+.mb-12 {
+  margin-bottom: 3rem;
+}
+
 .block {
   display: block;
 }
@@ -3261,6 +3269,10 @@ html {
   height: 14rem;
 }
 
+.h-20 {
+  height: 5rem;
+}
+
 .max-h-\[650px\] {
   max-height: 650px;
 }
@@ -3316,6 +3328,10 @@ html {
 .max-w-fit {
   max-width: -moz-fit-content;
   max-width: fit-content;
+}
+
+.max-w-\[50\%\] {
+  max-width: 50%;
 }
 
 .flex-1 {
@@ -3460,6 +3476,10 @@ html {
 
 .self-center {
   align-self: center;
+}
+
+.justify-self-center {
+  justify-self: center;
 }
 
 .overflow-y-auto {
@@ -3661,6 +3681,11 @@ html {
   padding-bottom: 5px;
 }
 
+.py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
 .pb-2 {
   padding-bottom: 0.5rem;
 }
@@ -3687,6 +3712,18 @@ html {
 
 .pt-4 {
   padding-top: 1rem;
+}
+
+.pb-20 {
+  padding-bottom: 5rem;
+}
+
+.pb-12 {
+  padding-bottom: 3rem;
+}
+
+.pt-8 {
+  padding-top: 2rem;
 }
 
 .text-left {
@@ -3978,6 +4015,10 @@ html {
   .max-sm\:text-xs {
     font-size: 0.75rem;
     line-height: 1rem;
+  }
+
+  .max-sm\:text-\[13px\] {
+    font-size: 13px;
   }
 }
 

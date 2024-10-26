@@ -10,6 +10,6 @@ templ Home(title string, links dto.InfoData, texts map[string]string, testimonia
 	@shared.Main(title) {
 		@partials.Header(languages, current_lang)
 		@partials.HomeMain(texts, links, testimonials)
-		@partials.Footer()
+		@partials.Footer(texts)
 	}
 }

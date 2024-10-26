@@ -5,7 +5,7 @@ import "github.com/fabricio-cosati/portfolio/cmd/dto"
 templ HomeMain(texts map[string]string, links dto.InfoData, testimonials map[string]string) {
 	<main class="flex-1 flex transition-all duration-300 ease-in-out">
 		<div class="flex-1 flex justify-center items-center mt-5 md:mt-0">
-			<main class="flex-1 text-white">
+			<main class="flex-1 text-white mb-12">
 				<article class="flex-1 flex items-center justify-between mt-[5vh] animate-fadeUpTitle">
 					<div class="inline-block">
 						<div class="mt-20">
@@ -413,12 +413,12 @@ templ HomeMain(texts map[string]string, links dto.InfoData, testimonials map[str
 		</div>
 	</main>
 	<script>
-        const highlightWords = "cel_cash";
-        const content = document.getElementById("AboutSecondParagraph");
+        const highlightWord = "cel_cash";
+        const about = document.getElementById("AboutSecondParagraph");
 
 		const celCashUrl = "https://www.celcoin.com.br/cel_cash/"
-        content.innerHTML = content.innerHTML.replace(
-            new RegExp(`(${highlightWords})`, 'g'), 
+        about.innerHTML = about.innerHTML.replace(
+            new RegExp(`(${highlightWord})`, 'g'), 
             `<a class="text-orange-400" href="${celCashUrl}" target="_blank">$1</a>`
         );
 

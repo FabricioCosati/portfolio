@@ -119,5 +119,17 @@ func LoadHomeTexts() map[string]i18n.Message {
 			ID:    "SuccessEmailDescription",
 			Other: "Thank you for getting in touch, I will reply as soon as possible",
 		},
+		"FooterFirstParagraph": {
+			ID:    "FooterFirstParagraph",
+			Other: "Designed and Developed by Fabricio Cosati.",
+		},
+		"FooterSecondParagraph": {
+			ID:    "FooterSecondParagraph",
+			Other: "This portfolio was built with Golang & Tailwind.",
+		},
+		"FooterThirdParagraph": {
+			ID:    "FooterThirdParagraph",
+			Other: "Hosted on Fly.io.",
+		},
 	}
 }

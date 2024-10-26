@@ -34,3 +34,6 @@ Testimonial03Text02 = "Working with him was a rewarding experience, and I am cer
 Testimonials = "Testimonials"
 ThirdPartSubtitle = "with a great interest in technology"
 Welcome = "Hello there! I'm"
+FooterFirstParagraph = "Designed and Developed by Fabricio Cosati."
+FooterSecondParagraph = "This portfolio was built with Golang & Tailwind."
+FooterThirdParagraph = "Hosted on Fly.io."
