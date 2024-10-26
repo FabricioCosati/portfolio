@@ -48,6 +48,10 @@ module.exports = {
       boxShadow: {
         'journeyBox': '0 0 0 2px #fff, inset 0 2px 0 rgba(0, 0, 0, .08), 0 3px 0 4px rgba(0, 0, 0, .05)',
       },
+      screens: {
+        '2xl': '1536px',
+        '2sm': '701px'
+      }
     },
   },
   corePlugins: {

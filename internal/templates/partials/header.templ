@@ -6,14 +6,14 @@ templ Header(languages dto.LanguagesCollection, current_lang string) {
 	<header class="fixed bg-slate-950 inset-x-0 z-[1]">
 		<div class="items-center p-4">
 			<form action="/change-lang" method="POST">
-				<div id="dropdownLanguageButton" class="w-[120px] relative bg-slate-900 text-white text-xs rounded-md">
+				<div id="dropdownLanguageButton" class="w-[120px] md:w-[150px] relative bg-slate-900 text-white text-xs md:text-base rounded-md">
 					<div class="pl-4 pr-3 py-2 rounded-sm text-center cursor-pointer flex justify-between" onclick="toggleDropdown()">
 						for _, language := range languages.Languages {
 							if (current_lang == language.Acronym) {
 								<span class="content-center">
 									{ language.Name }
 								</span>
-								<img class=" rounded-full w-[20px]" src={ language.Image } alt={ language.Acronym }/>
+								<img class=" rounded-full w-[20px] md:w-[25px]" src={ language.Image } alt={ language.Acronym }/>
 							}
 						}
 					</div>
