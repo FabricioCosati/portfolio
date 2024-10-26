@@ -3253,6 +3253,14 @@ html {
   height: 100%;
 }
 
+.h-52 {
+  height: 13rem;
+}
+
+.h-56 {
+  height: 14rem;
+}
+
 .max-h-\[650px\] {
   max-height: 650px;
 }
@@ -3731,6 +3739,14 @@ html {
   line-height: 1rem;
 }
 
+.text-\[32px\] {
+  font-size: 32px;
+}
+
+.text-\[calc\(1vw\+1vh\)\] {
+  font-size: calc(1vw + 1vh);
+}
+
 .font-bold {
   font-weight: 700;
 }
@@ -3741,6 +3757,10 @@ html {
 
 .font-thin {
   font-weight: 100;
+}
+
+.font-\[32px\] {
+  font-weight: 32px;
 }
 
 .leading-6 {
@@ -3954,6 +3974,11 @@ html {
     font-size: 0.875rem;
     line-height: 1.25rem;
   }
+
+  .max-sm\:text-xs {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
 }
 
 @media (min-width: 720px) {
@@ -3971,6 +3996,10 @@ html {
 
   .md\:h-52 {
     height: 13rem;
+  }
+
+  .md\:h-56 {
+    height: 14rem;
   }
 
   .md\:w-\[150px\] {

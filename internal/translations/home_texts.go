@@ -4,7 +4,7 @@ import "github.com/nicksnyder/go-i18n/v2/i18n"
 
 //go:generate goi18n extract -sourceLanguage en -outdir ./
 //go:generate goi18n merge -outdir ./ ./active.en.toml ./translate.pt.toml
-//go:generate goi18n merge -sourceLanguage pt -outdir ./ ./translate.pt.toml ./active.pt.toml
+//go:generate goi18n merge -sourceLanguage pt -outdir ./ ./active.pt.toml ./translate.pt.toml
 func LoadHomeTexts() map[string]i18n.Message {
 	return map[string]i18n.Message{
 		"Welcome": {
@@ -46,6 +46,10 @@ func LoadHomeTexts() map[string]i18n.Message {
 		"MyJourney": {
 			ID:    "MyJourney",
 			Other: "My Journey",
+		},
+		"KeyFocus": {
+			ID:    "KeyFocus",
+			Other: "Key Focus:",
 		},
 		"CelcoinPosition": {
 			ID:    "CelcoinPosition",
