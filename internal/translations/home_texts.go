@@ -27,6 +27,10 @@ func LoadHomeTexts() map[string]i18n.Message {
 			ID:    "Resume",
 			Other: "See my Resume",
 		},
+		"ResumeUrl": {
+			ID:    "ResumeUrl",
+			Other: "https://drive.google.com/file/d/1WNNC9xK_fJfYY8wkDQToTQVkOQhXWQ8w/view",
+		},
 		"About": {
 			ID:    "About",
 			Other: "About Me",

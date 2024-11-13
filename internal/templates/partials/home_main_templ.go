@@ -31,7 +31,7 @@ func HomeMain(texts map[string]string, links dto.InfoData, testimonials map[stri
 			templ_7745c5c3_Var1 = templ.NopComponent
 		}
 		ctx = templ.ClearChildren(ctx)
-		templ_7745c5c3_Err = templ.WriteWatchModeString(templ_7745c5c3_Buffer, 1)
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<main class=\"flex-1 flex transition-all duration-300 ease-in-out\"><div class=\"flex-1 flex justify-center items-center mt-5 md:mt-0\"><main class=\"flex-1 text-white mb-12\"><article class=\"flex-1 flex items-center justify-between mt-[5vh] animate-fadeUpTitle\"><div class=\"inline-block\"><div class=\"mt-20\"><p class=\"font-text font-bold text-left text-orange-400 pb-2 md:text-xl\">")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
@@ -44,7 +44,7 @@ func HomeMain(texts map[string]string, links dto.InfoData, testimonials map[stri
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		templ_7745c5c3_Err = templ.WriteWatchModeString(templ_7745c5c3_Buffer, 2)
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</p><h1 class=\"font-title font-bold text-6xl text-left flex items-baseline\"><p>Fabricio Cosati<span class=\"font-thin animate-blink\">_</span></p></h1></div><div class=\"mt-8\"><p class=\"font-text font-thin text-white md:text-xl\">")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
@@ -57,7 +57,7 @@ func HomeMain(texts map[string]string, links dto.InfoData, testimonials map[stri
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		templ_7745c5c3_Err = templ.WriteWatchModeString(templ_7745c5c3_Buffer, 3)
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(" <span class=\"font-bold text-orange-400\">")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
@@ -70,7 +70,7 @@ func HomeMain(texts map[string]string, links dto.InfoData, testimonials map[stri
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		templ_7745c5c3_Err = templ.WriteWatchModeString(templ_7745c5c3_Buffer, 4)
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</span> ")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
@@ -83,7 +83,7 @@ func HomeMain(texts map[string]string, links dto.InfoData, testimonials map[stri
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		templ_7745c5c3_Err = templ.WriteWatchModeString(templ_7745c5c3_Buffer, 5)
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</p></div><div class=\"mt-8 flex flex-row\"><a class=\"text-sm\" href=\"")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
@@ -92,7 +92,7 @@ func HomeMain(texts map[string]string, links dto.InfoData, testimonials map[stri
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		templ_7745c5c3_Err = templ.WriteWatchModeString(templ_7745c5c3_Buffer, 6)
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("\" target=\"_blank\"><button class=\"bg-slate-900 hover:bg-slate-800 px-3 py-[5px] rounded-md inline-flex font-title font-medium md:text-base\"><span class=\"inline-flex self-center mr-3\"><i class=\"fa-brands fa-github max-sm:text-sm text-orange-400\"></i></span> Github</button></a> <a class=\"text-sm ml-5\" href=\"")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
@@ -101,16 +101,16 @@ func HomeMain(texts map[string]string, links dto.InfoData, testimonials map[stri
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		templ_7745c5c3_Err = templ.WriteWatchModeString(templ_7745c5c3_Buffer, 7)
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("\" target=\"_blank\"><button class=\"bg-slate-900 hover:bg-slate-800 px-3 py-[5px] rounded-md inline-flex font-title font-medium md:text-base\"><span class=\"inline-flex self-center mr-3\"><i class=\"fa-brands fa-linkedin max-sm:text-sm text-orange-400\"></i></span> Linkedin</button></a></div><div class=\"mt-12\"><a href=\"")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		var templ_7745c5c3_Var8 templ.SafeURL = templ.SafeURL(links.Urls.Resume_url)
+		var templ_7745c5c3_Var8 templ.SafeURL = templ.SafeURL(texts["ResumeUrl"])
 		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(string(templ_7745c5c3_Var8)))
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		templ_7745c5c3_Err = templ.WriteWatchModeString(templ_7745c5c3_Buffer, 8)
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("\" target=\"_blank\"><button class=\"bg-slate-900 hover:bg-slate-800 px-5 py-3 rounded-lg inline-flex font-title font-medium md:text-base\"><span class=\"inline-flex self-center mr-3\"><i class=\"fa-solid fa-file-pdf max-sm:text-base md:text-lg text-orange-400\"></i></span> ")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
@@ -123,7 +123,7 @@ func HomeMain(texts map[string]string, links dto.InfoData, testimonials map[stri
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		templ_7745c5c3_Err = templ.WriteWatchModeString(templ_7745c5c3_Buffer, 9)
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</button></a></div></div><div class=\"ml-8\"><img class=\"max-w-fit max-2sm:hidden w-full h-full\" src=\"/img/office.png\" alt=\"foto\"></div></article><article class=\"pt-16 mt-18 animate-fadeUp [animation-timeline:view()] [animation-range:entry_0px_cover_600px]\"><div class=\"place-items-start\"><h3 class=\"text-xl md:text-2xl font-title font-bold\"><i class=\"fa-regular fa-user max-sm:text-sm md:text-xl text-orange-400\"></i> ")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
@@ -136,7 +136,7 @@ func HomeMain(texts map[string]string, links dto.InfoData, testimonials map[stri
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		templ_7745c5c3_Err = templ.WriteWatchModeString(templ_7745c5c3_Buffer, 10)
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</h3></div><div class=\"py-8\"><div class=\"grid max-sm:grid-rows-2 max-sm:gap-8 md:grid-cols-2 place-items-center\"><div class=\"align-text-top text-base max-sm:text-sm md:text-lg\"><div class=\"align-text-top font-text\"><p class=\"\">")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
@@ -149,7 +149,7 @@ func HomeMain(texts map[string]string, links dto.InfoData, testimonials map[stri
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		templ_7745c5c3_Err = templ.WriteWatchModeString(templ_7745c5c3_Buffer, 11)
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</p><p id=\"AboutSecondParagraph\" class=\"pt-4\">")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
@@ -162,7 +162,7 @@ func HomeMain(texts map[string]string, links dto.InfoData, testimonials map[stri
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		templ_7745c5c3_Err = templ.WriteWatchModeString(templ_7745c5c3_Buffer, 12)
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</p><p class=\"pt-4\">")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
@@ -175,7 +175,7 @@ func HomeMain(texts map[string]string, links dto.InfoData, testimonials map[stri
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		templ_7745c5c3_Err = templ.WriteWatchModeString(templ_7745c5c3_Buffer, 13)
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</p></div></div><div class=\"p-8\"><img class=\"w-[250px] rounded-full\" src=\"/img/photo.png\" alt=\"Fabricio Cosati\"></div></div></div></article><article class=\"pt-16 mt-18 animate-fadeUp [animation-timeline:view()] [animation-range:entry_0px_cover_600px]\"><div class=\"place-items-start\"><h3 class=\"text-xl md:text-2xl font-title font-bold\"><i class=\"fa-solid fa-plane max-sm:text-sm text-orange-400\"></i> ")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
@@ -188,7 +188,7 @@ func HomeMain(texts map[string]string, links dto.InfoData, testimonials map[stri
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		templ_7745c5c3_Err = templ.WriteWatchModeString(templ_7745c5c3_Buffer, 14)
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</h3></div><div class=\"relative py-8 2xl:grid grid-cols-2\"><div class=\"before:bg-slate-900 before:h-[90%] before:absolute before:w-[4px]\"><div class=\"flex relative py-1\"><div class=\"-ml-4 mt-12 bg-slate-900 rounded-full left-0 absolute top-0 w-[35px] h-[35px]\"><div class=\"flex items-center justify-center h-full\"><i class=\"fa-solid fa-briefcase max-sm:text-base text-orange-400\"></i></div></div><div class=\"ml-8 pb-8\"><div class=\"w-60 h-56 md:w-fit md:h-52 group relative\"><div class=\"relative\"><div class=\"ml-2 font-text\"><div class=\"w-[150px] h-[50px] mb-2\"><img class=\"object-contain object-left w-full h-full\" src=\"/img/logo-celcoin.jpeg\" alt=\"Celcoin\"></div><div class=\"leading-none mb-1\"><h3><span class=\"font-bold font-title md:text-xl\">Celcoin</span></h3><h4 class=\"py-1\"><span class=\"text-xs md:text-lg\">Jun 2022 - ")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
@@ -201,7 +201,7 @@ func HomeMain(texts map[string]string, links dto.InfoData, testimonials map[stri
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		templ_7745c5c3_Err = templ.WriteWatchModeString(templ_7745c5c3_Buffer, 15)
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</span></h4><h4><span class=\"text-sm md:text-lg\">")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
@@ -214,7 +214,7 @@ func HomeMain(texts map[string]string, links dto.InfoData, testimonials map[stri
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		templ_7745c5c3_Err = templ.WriteWatchModeString(templ_7745c5c3_Buffer, 16)
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</span></h4></div><div class=\"mb-1\"><span class=\"max-sm:text-xs text-base\"><i class=\"fa-solid fa-location-dot text-orange-400\"></i> ")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
@@ -227,7 +227,7 @@ func HomeMain(texts map[string]string, links dto.InfoData, testimonials map[stri
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		templ_7745c5c3_Err = templ.WriteWatchModeString(templ_7745c5c3_Buffer, 17)
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</span></div><div><span class=\"text-sm max-sm:text-xs\"><span class=\"font-bold\">")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
@@ -240,7 +240,7 @@ func HomeMain(texts map[string]string, links dto.InfoData, testimonials map[stri
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		templ_7745c5c3_Err = templ.WriteWatchModeString(templ_7745c5c3_Buffer, 18)
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</span> Golang, Python, Php, Laravel, React, Next, AWS & MySQL</span></div></div></div></div></div></div><div class=\"flex relative py-1\"><div class=\"-ml-4 mt-12 bg-slate-900 rounded-full left-0 absolute top-0 w-[35px] h-[35px]\"><div class=\"flex items-center justify-center h-full\"><i class=\"fa-solid fa-briefcase max-sm:text-base text-orange-400\"></i></div></div><div class=\"ml-8 pb-8\"><div class=\"w-60 h-56 md:w-fit md:h-52 group relative\"><div class=\"relative\"><div class=\"ml-2 font-text\"><div class=\"w-[150px] h-[50px] mb-1\"><img class=\"object-contain object-left w-full h-full\" src=\"/img/logo-escalar.png\" alt=\"Escalar Comunicação e Marketing\"></div><div class=\"leading-none mb-1\"><h3><span class=\"font-bold font-title md:text-xl\">Escalar Comunicação</span></h3><h4 class=\"py-1\"><span class=\"text-xs md:text-lg\">Jan 2022 - Jun 2022</span></h4><h4><span class=\"text-sm md:text-lg\">")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
@@ -253,7 +253,7 @@ func HomeMain(texts map[string]string, links dto.InfoData, testimonials map[stri
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		templ_7745c5c3_Err = templ.WriteWatchModeString(templ_7745c5c3_Buffer, 19)
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</span></h4></div><div class=\"mb-1\"><span class=\"max-sm:text-xs text-base\"><i class=\"fa-solid fa-location-dot text-orange-400\"></i> ")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
@@ -266,7 +266,7 @@ func HomeMain(texts map[string]string, links dto.InfoData, testimonials map[stri
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		templ_7745c5c3_Err = templ.WriteWatchModeString(templ_7745c5c3_Buffer, 20)
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</span></div><div><span class=\"text-sm max-sm:text-xs\"><span class=\"font-bold\">")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
@@ -279,7 +279,7 @@ func HomeMain(texts map[string]string, links dto.InfoData, testimonials map[stri
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		templ_7745c5c3_Err = templ.WriteWatchModeString(templ_7745c5c3_Buffer, 21)
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</span> Php, Laravel & Javascript</span></div></div></div></div></div></div><div class=\"flex relative py-1\"><div class=\"-ml-4 mt-12 bg-slate-900 rounded-full left-0 absolute top-0 w-[35px] h-[35px]\"><div class=\"flex items-center justify-center h-full\"><i class=\"fa-solid fa-graduation-cap max-sm:text-base text-orange-400\"></i></div></div><div class=\"ml-8 pb-8\"><div class=\"w-60 h-40 md:w-fit md:h-52 group relative\"><div class=\"relative\"><div class=\"ml-2 font-text\"><div class=\"w-[150px] h-[50px] mb-1\"><img class=\"object-contain object-left w-full h-full\" src=\"/img/logo-una.jpeg\" alt=\"Una\"></div><div class=\"leading-none mb-1\"><h3><span class=\"font-bold font-title md:text-xl\">")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
@@ -292,7 +292,7 @@ func HomeMain(texts map[string]string, links dto.InfoData, testimonials map[stri
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		templ_7745c5c3_Err = templ.WriteWatchModeString(templ_7745c5c3_Buffer, 22)
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</span></h3><h4 class=\"py-1\"><span class=\"text-xs md:text-lg\">2019 - 2022</span></h4><h4><span class=\"text-sm md:text-lg\">")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
@@ -305,7 +305,7 @@ func HomeMain(texts map[string]string, links dto.InfoData, testimonials map[stri
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		templ_7745c5c3_Err = templ.WriteWatchModeString(templ_7745c5c3_Buffer, 23)
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</span></h4></div><div><span class=\"max-sm:text-xs text-base\"><i class=\"fa-solid fa-location-dot text-orange-400\"></i> ")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
@@ -318,7 +318,7 @@ func HomeMain(texts map[string]string, links dto.InfoData, testimonials map[stri
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		templ_7745c5c3_Err = templ.WriteWatchModeString(templ_7745c5c3_Buffer, 24)
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</span></div></div></div></div></div></div></div><div class=\"max-w-[650px] max-h-[650px]\"><img class=\"max-w-fit max-2xl:hidden w-full h-full\" src=\"/img/business.png\" alt=\"foto\"></div></div></article><article class=\"pt-16 mt-18 animate-fadeUp [animation-timeline:view()] [animation-range:entry_0px_cover_600px]\"><div class=\"place-items-start\"><h3 class=\"text-xl md:text-2xl font-title font-bold\"><i class=\"fa-solid fa-code max-sm:text-sm text-orange-400\"></i> ")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
@@ -331,7 +331,7 @@ func HomeMain(texts map[string]string, links dto.InfoData, testimonials map[stri
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		templ_7745c5c3_Err = templ.WriteWatchModeString(templ_7745c5c3_Buffer, 25)
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</h3></div><div class=\"2xl:grid grid-cols-2\"><div class=\"py-8\"><div><h4 class=\"pb-6 font-title md:text-xl\">")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
@@ -344,7 +344,7 @@ func HomeMain(texts map[string]string, links dto.InfoData, testimonials map[stri
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		templ_7745c5c3_Err = templ.WriteWatchModeString(templ_7745c5c3_Buffer, 26)
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</h4><div class=\"max-md:grid grid-cols-3 gap-y-4 flex justify-items-center md:justify-items-start items-center\"><div class=\"tooltip w-[40px] ml-6\" data-tip=\"Html\"><img src=\"/img/html.svg\" alt=\"Html\"></div><div class=\"tooltip w-[40px] ml-6\" data-tip=\"Css\"><img src=\"/img/css.svg\" alt=\"Css\"></div><div class=\"tooltip w-[40px] ml-6\" data-tip=\"Javascript\"><img src=\"/img/javascript.svg\" alt=\"Javascript\"></div><div class=\"tooltip w-[40px] ml-6\" data-tip=\"Typescript\"><img src=\"/img/typescript.svg\" alt=\"Typescript\"></div><div class=\"tooltip w-[40px] ml-6\" data-tip=\"React\"><img src=\"/img/react.svg\" alt=\"React\"></div><div class=\"tooltip w-[40px] ml-6 relative\" data-tip=\"NextJs\"><div class=\"absolute w-full h-[40px]\"></div><img src=\"/img/next-js.svg\" alt=\"NextJs\"></div><div class=\"tooltip w-[40px] ml-6\" data-tip=\"Tailwind\"><img src=\"/img/tailwind.svg\" alt=\"Tailwind\"></div><div class=\"tooltip w-[40px] ml-6\" data-tip=\"Bootstrap\"><img src=\"/img/bootstrap.svg\" alt=\"Bootstrap\"></div><div class=\"tooltip w-[40px] ml-6\" data-tip=\"Scss\"><img src=\"/img/scss.svg\" alt=\"Scss\"></div></div></div><div class=\"py-6\"><h4 class=\"pb-6 font-title md:text-xl\">")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
@@ -357,7 +357,7 @@ func HomeMain(texts map[string]string, links dto.InfoData, testimonials map[stri
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		templ_7745c5c3_Err = templ.WriteWatchModeString(templ_7745c5c3_Buffer, 27)
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</h4><div class=\"max-md:grid grid-cols-3 gap-y-4 flex justify-items-center md:justify-items-start items-center\"><div class=\"tooltip w-[40px] ml-6\" data-tip=\"Php\"><img src=\"/img/php.svg\" alt=\"Php\"></div><div class=\"tooltip w-[40px] ml-6\" data-tip=\"Laravel\"><img src=\"/img/laravel.svg\" alt=\"Laravel\"></div><div class=\"tooltip w-[40px] ml-6\" data-tip=\"Go\"><img src=\"/img/go.svg\" alt=\"Go\"></div><div class=\"tooltip w-[40px] ml-6\" data-tip=\"Typescript\"><img src=\"/img/typescript.svg\" alt=\"Typescript\"></div><div class=\"tooltip w-[40px] ml-6\" data-tip=\"Gin Gonic\"><img src=\"/img/gin-gonic.svg\" alt=\"Gin Gonic\"></div><div class=\"tooltip w-[40px] ml-6\" data-tip=\"Python\"><img src=\"/img/python.svg\" alt=\"Python\"></div><div class=\"tooltip w-[40px] ml-6\" data-tip=\"NodeJs\"><img src=\"/img/node-js.svg\" alt=\"NodeJs\"></div></div></div><div class=\"py-6\"><h4 class=\"pb-6 font-title md:text-xl\">")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
@@ -370,7 +370,7 @@ func HomeMain(texts map[string]string, links dto.InfoData, testimonials map[stri
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		templ_7745c5c3_Err = templ.WriteWatchModeString(templ_7745c5c3_Buffer, 28)
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</h4><div class=\"max-md:grid grid-cols-3 gap-y-4 flex justify-items-center md:justify-items-start items-center\"><div class=\"tooltip w-[40px] ml-6\" data-tip=\"Aws\"><img src=\"/img/aws.svg\" alt=\"Aws\"></div><div class=\"tooltip w-[40px] ml-6\" data-tip=\"Docker\"><img src=\"/img/docker.svg\" alt=\"Docker\"></div><div class=\"tooltip w-[40px] ml-6\" data-tip=\"Mysql\"><img src=\"/img/mysql.svg\" alt=\"Mysql\"></div></div></div></div><div class=\"max-w-[650px] max-h-[650px]\"><img class=\"max-w-fit max-2xl:hidden w-full h-full\" src=\"/img/software.png\" alt=\"foto\"></div></div></article><article class=\"pt-16 mt-18 animate-fadeUp [animation-timeline:view()] [animation-range:entry_0px_cover_600px]\"><div class=\"place-items-start\"><h3 class=\"text-xl md:text-2xl font-title font-bold\"><i class=\"fa-solid fa-comment-dots max-sm:text-sm text-orange-400\"></i> ")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
@@ -383,7 +383,7 @@ func HomeMain(texts map[string]string, links dto.InfoData, testimonials map[stri
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		templ_7745c5c3_Err = templ.WriteWatchModeString(templ_7745c5c3_Buffer, 29)
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</h3></div><div class=\"py-8\"><div class=\"bg-slate-900/50 shadow-md shadow-slate-800/30 p-4 rounded-md\"><div class=\"flex w-full mb-8\"><div class=\"flex items-center justify-center\"><img class=\"max-sm:w-[50px] w-[90px] rounded-full\" src=\"/img/testimonials_01.jpg\" alt=\"foto\"></div><div class=\"pl-4 w-full font-text\"><p class=\"text-lg md:text-xl font-title\">Rafael Rilen</p><p class=\"text-xs md:text-sm\">")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
@@ -396,7 +396,7 @@ func HomeMain(texts map[string]string, links dto.InfoData, testimonials map[stri
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		templ_7745c5c3_Err = templ.WriteWatchModeString(templ_7745c5c3_Buffer, 30)
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</p></div></div><div class=\"text-sm font-text\"><p>")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
@@ -409,7 +409,7 @@ func HomeMain(texts map[string]string, links dto.InfoData, testimonials map[stri
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		templ_7745c5c3_Err = templ.WriteWatchModeString(templ_7745c5c3_Buffer, 31)
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</p><p class=\"pt-4\">")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
@@ -422,7 +422,7 @@ func HomeMain(texts map[string]string, links dto.InfoData, testimonials map[stri
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		templ_7745c5c3_Err = templ.WriteWatchModeString(templ_7745c5c3_Buffer, 32)
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</p></div></div><div class=\"bg-slate-900/50 shadow-md shadow-slate-800/30 p-4 rounded-md my-12\"><div class=\"flex w-full mb-8\"><div class=\"flex items-center justify-center\"><img class=\"max-sm:w-[50px] w-[90px] rounded-full\" src=\"/img/testimonials_02.jpg\" alt=\"foto\"></div><div class=\"pl-4 w-full font-text\"><p class=\"text-lg md:text-xl font-title\">Ryan Souza</p><p class=\"text-xs md:text-sm\">")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
@@ -435,7 +435,7 @@ func HomeMain(texts map[string]string, links dto.InfoData, testimonials map[stri
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		templ_7745c5c3_Err = templ.WriteWatchModeString(templ_7745c5c3_Buffer, 33)
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</p></div></div><div class=\"text-sm font-text\"><p>")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
@@ -448,7 +448,7 @@ func HomeMain(texts map[string]string, links dto.InfoData, testimonials map[stri
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		templ_7745c5c3_Err = templ.WriteWatchModeString(templ_7745c5c3_Buffer, 34)
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</p></div></div><div class=\"bg-slate-900/50 shadow-md shadow-slate-800/30 p-4 rounded-md\"><div class=\"flex w-full mb-8\"><div class=\"flex items-center justify-center\"><img class=\"max-sm:w-[50px] w-[90px] rounded-full\" src=\"/img/testimonials_03.jpg\" alt=\"foto\"></div><div class=\"pl-4 w-full font-text\"><p class=\"text-lg md:text-xl font-title\">Tales Andena</p><p class=\"text-xs md:text-sm\">")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
@@ -461,7 +461,7 @@ func HomeMain(texts map[string]string, links dto.InfoData, testimonials map[stri
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		templ_7745c5c3_Err = templ.WriteWatchModeString(templ_7745c5c3_Buffer, 35)
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</p></div></div><div class=\"text-sm font-text\"><p>")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
@@ -474,7 +474,7 @@ func HomeMain(texts map[string]string, links dto.InfoData, testimonials map[stri
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		templ_7745c5c3_Err = templ.WriteWatchModeString(templ_7745c5c3_Buffer, 36)
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</p><p class=\"pt-4\">")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
@@ -487,7 +487,7 @@ func HomeMain(texts map[string]string, links dto.InfoData, testimonials map[stri
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		templ_7745c5c3_Err = templ.WriteWatchModeString(templ_7745c5c3_Buffer, 37)
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</p></div></div></div></article><article class=\"pt-16 mt-18 animate-fadeUp [animation-timeline:view()] [animation-range:entry_0px_cover_600px]\"><div class=\"place-items-start\"><h3 class=\"text-xl md:text-2xl font-title font-bold\"><i class=\"fa-solid fa-envelope max-sm:text-sm text-orange-400\"></i> ")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
@@ -500,7 +500,7 @@ func HomeMain(texts map[string]string, links dto.InfoData, testimonials map[stri
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		templ_7745c5c3_Err = templ.WriteWatchModeString(templ_7745c5c3_Buffer, 38)
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</h3></div><div class=\"py-8\"><div class=\"inline max-sm:grid max-sm:grid-cols-2 max-sm:gap-8 place-items-center\"><a class=\"text-sm\" href=\"")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
@@ -509,7 +509,7 @@ func HomeMain(texts map[string]string, links dto.InfoData, testimonials map[stri
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		templ_7745c5c3_Err = templ.WriteWatchModeString(templ_7745c5c3_Buffer, 39)
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("\" target=\"_blank\"><button class=\"bg-slate-900 hover:bg-slate-800 px-3 py-[5px] rounded-md inline-flex font-title font-medium md:text-base\"><span class=\"inline-flex self-center mr-3\"><i class=\"fa-brands fa-github max-sm:text-sm text-orange-400\"></i></span> Github</button></a> <a class=\"text-sm\" href=\"")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
@@ -518,7 +518,7 @@ func HomeMain(texts map[string]string, links dto.InfoData, testimonials map[stri
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		templ_7745c5c3_Err = templ.WriteWatchModeString(templ_7745c5c3_Buffer, 40)
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("\" target=\"_blank\"><button class=\"bg-slate-900 hover:bg-slate-800 px-3 py-[5px] md:ml-4 rounded-md inline-flex font-title font-medium md:text-base\"><span class=\"inline-flex self-center mr-3\"><i class=\"fa-brands fa-linkedin max-sm:text-sm text-orange-400\"></i></span> Linkedin</button></a></div><div><form class=\"2xl:max-w-[50%]\" id=\"sendEmail\" action=\"/send-email\" method=\"POST\"><div class=\"mt-12\"><label for=\"name\" class=\"block mb-2 text-sm md:text-base font-medium text-white font-title\">")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
@@ -531,7 +531,7 @@ func HomeMain(texts map[string]string, links dto.InfoData, testimonials map[stri
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		templ_7745c5c3_Err = templ.WriteWatchModeString(templ_7745c5c3_Buffer, 41)
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</label> <input id=\"name\" type=\"text\" name=\"name\" placeholder=\"")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
@@ -544,7 +544,7 @@ func HomeMain(texts map[string]string, links dto.InfoData, testimonials map[stri
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		templ_7745c5c3_Err = templ.WriteWatchModeString(templ_7745c5c3_Buffer, 42)
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("\" required class=\"bg-slate-900 border-slate-700 text-white text-sm md:text-base rounded-lg focus:ring-slate-900 focus:border-slate-500 block w-full p-2.5 font-text\"></div><div class=\"mt-4\"><label for=\"email\" class=\"block mb-2 text-sm md:text-base font-medium text-white font-title\">Email</label> <input id=\"email\" type=\"email\" name=\"email\" placeholder=\"Email\" required class=\"bg-slate-900 border-slate-700 text-white text-sm md:text-base rounded-lg focus:ring-slate-900 focus:border-slate-500 block w-full p-2.5 font-text\"></div><div class=\"mt-4\"><label for=\"message\" class=\"block mb-2 text-sm md:text-base font-medium text-white font-title\">")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
@@ -557,7 +557,7 @@ func HomeMain(texts map[string]string, links dto.InfoData, testimonials map[stri
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		templ_7745c5c3_Err = templ.WriteWatchModeString(templ_7745c5c3_Buffer, 43)
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</label> <textarea id=\"message\" name=\"message\" placeholder=\"")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
@@ -570,7 +570,7 @@ func HomeMain(texts map[string]string, links dto.InfoData, testimonials map[stri
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		templ_7745c5c3_Err = templ.WriteWatchModeString(templ_7745c5c3_Buffer, 44)
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("\" class=\"bg-slate-900 border-slate-700 text-white text-sm md:text-base rounded-lg focus:ring-slate-900 focus:border-slate-500 block w-full p-2.5 font-text max-sm:h-32\"></textarea></div><button type=\"submit\" class=\"btn btn-active btn-neutral block w-full border-slate-700 bg-slate-900 hover:bg-slate-800 mt-8 md:text-base\">")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
@@ -583,7 +583,7 @@ func HomeMain(texts map[string]string, links dto.InfoData, testimonials map[stri
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		templ_7745c5c3_Err = templ.WriteWatchModeString(templ_7745c5c3_Buffer, 45)
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</button></form></div></div></article></main></div><div id=\"alertSuccess\" class=\"fixed bg-green-100 border-t border-b border-green-500 text-green-700 px-4 py-3 left-0 right-0 bottom-0 opacity-0 shadow-lg translate-y-5 scale-95 transition-all duration-500 ease-in-out rounded-md\" role=\"alert\"><p class=\"font-bold\">")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
@@ -596,7 +596,7 @@ func HomeMain(texts map[string]string, links dto.InfoData, testimonials map[stri
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		templ_7745c5c3_Err = templ.WriteWatchModeString(templ_7745c5c3_Buffer, 46)
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</p><p class=\"text-sm\">")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
@@ -609,7 +609,7 @@ func HomeMain(texts map[string]string, links dto.InfoData, testimonials map[stri
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		templ_7745c5c3_Err = templ.WriteWatchModeString(templ_7745c5c3_Buffer, 47)
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</p></div></main><script>\r\n        const highlightWord = \"cel_cash\";\r\n        const about = document.getElementById(\"AboutSecondParagraph\");\r\n\r\n\t\tconst celCashUrl = \"https://www.celcoin.com.br/cel_cash/\"\r\n        about.innerHTML = about.innerHTML.replace(\r\n            new RegExp(`(${highlightWord})`, 'g'), \r\n            `<a class=\"text-orange-400\" href=\"${celCashUrl}\" target=\"_blank\">$1</a>`\r\n        );\r\n\r\n\t\tasync function formSubmit(event) {\r\n\t\t\tvar url = \"/send-email\";\r\n\t\t\tvar request = new XMLHttpRequest();\r\n\t\t\trequest.open('POST', url, true);\r\n\t\t\trequest.onload = function() {\r\n\t\t\t\tanimateSuccessAlert()\r\n\t\t\t};\r\n\t\t\trequest.onerror = function() {\r\n\t\t\t\r\n\t\t\t};\r\n\t\t\trequest.send(new FormData(event.target));\r\n\t\t\tevent.preventDefault();\r\n\t\t}\r\n\r\n\t\tfunction animateSuccessAlert() {\r\n\t\t\tconst alert = document.getElementById('alertSuccess');\r\n\r\n\t\t\talert.classList.remove('opacity-0', 'translate-y-5', 'scale-95');\r\n\t\t\talert.classList.add('opacity-100', 'translate-y-0', 'scale-100');\r\n\r\n\t\t\tsetTimeout(() => {\r\n\t\t\t\talert.classList.remove('opacity-100', 'translate-y-0', 'scale-100');\r\n\t\t\t\talert.classList.add('opacity-0', 'translate-y-5', 'scale-95');\r\n\t\t\t}, 5000);\r\n\t\t}\r\n\r\n\t\tdocument.getElementById(\"sendEmail\").addEventListener(\"submit\", formSubmit);\r\n\r\n    </script>")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}

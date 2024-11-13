@@ -38,7 +38,7 @@ templ HomeMain(texts map[string]string, links dto.InfoData, testimonials map[str
 							</a>
 						</div>
 						<div class="mt-12">
-							<a href={ templ.SafeURL(links.Urls.Resume_url) } target="_blank">
+							<a href={ templ.SafeURL(texts["ResumeUrl"]) } target="_blank">
 								<button class="bg-slate-900 hover:bg-slate-800 px-5 py-3 rounded-lg inline-flex font-title font-medium md:text-base">
 									<span class="inline-flex self-center mr-3">
 										<i class="fa-solid fa-file-pdf max-sm:text-base md:text-lg text-orange-400"></i>

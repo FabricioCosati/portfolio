@@ -11,7 +11,6 @@ type InfoData struct {
 type UrlsData struct {
 	Linkedin_url string `toml:"linkedin_url"`
 	Github_url   string `toml:"github_url"`
-	Resume_url   string `toml:"resume_url"`
 }
 
 func GetInfoData() *InfoData {

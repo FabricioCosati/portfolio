@@ -1,4 +1,0 @@
-<body><h1>Entraram em contato com você através do seu portfolio!</h1><h1>Nome <span>
-</span></h1><h1>Email <span>
-</span></h1><p>
-</p></body>
