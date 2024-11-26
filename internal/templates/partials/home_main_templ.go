@@ -344,14 +344,14 @@ func HomeMain(texts map[string]string, links dto.InfoData, testimonials map[stri
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</h4><div class=\"max-md:grid grid-cols-3 gap-y-4 flex justify-items-center md:justify-items-start items-center\"><div class=\"tooltip w-[40px] ml-6\" data-tip=\"Html\"><img src=\"/img/html.svg\" alt=\"Html\"></div><div class=\"tooltip w-[40px] ml-6\" data-tip=\"Css\"><img src=\"/img/css.svg\" alt=\"Css\"></div><div class=\"tooltip w-[40px] ml-6\" data-tip=\"Javascript\"><img src=\"/img/javascript.svg\" alt=\"Javascript\"></div><div class=\"tooltip w-[40px] ml-6\" data-tip=\"Typescript\"><img src=\"/img/typescript.svg\" alt=\"Typescript\"></div><div class=\"tooltip w-[40px] ml-6\" data-tip=\"React\"><img src=\"/img/react.svg\" alt=\"React\"></div><div class=\"tooltip w-[40px] ml-6 relative\" data-tip=\"NextJs\"><div class=\"absolute w-full h-[40px]\"></div><img src=\"/img/next-js.svg\" alt=\"NextJs\"></div><div class=\"tooltip w-[40px] ml-6\" data-tip=\"Tailwind\"><img src=\"/img/tailwind.svg\" alt=\"Tailwind\"></div><div class=\"tooltip w-[40px] ml-6\" data-tip=\"Bootstrap\"><img src=\"/img/bootstrap.svg\" alt=\"Bootstrap\"></div><div class=\"tooltip w-[40px] ml-6\" data-tip=\"Scss\"><img src=\"/img/scss.svg\" alt=\"Scss\"></div></div></div><div class=\"py-6\"><h4 class=\"pb-6 font-title md:text-xl\">")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</h4><div class=\"max-md:grid grid-cols-3 gap-y-4 flex justify-items-center md:justify-items-start items-center\"><div class=\"tooltip w-[40px] ml-6\" data-tip=\"Html, Css &amp; Javascript\"><img src=\"/img/html_css_js.png\" alt=\"Html, Css &amp; Javascript\"></div><div class=\"tooltip w-[40px] ml-6\" data-tip=\"Typescript\"><img src=\"/img/typescript.svg\" alt=\"Typescript\"></div><div class=\"tooltip w-[40px] ml-6\" data-tip=\"React\"><img src=\"/img/react.svg\" alt=\"React\"></div><div class=\"tooltip w-[40px] ml-6 relative\" data-tip=\"NextJs\"><div class=\"absolute w-full h-[40px]\"></div><img src=\"/img/next-js.svg\" alt=\"NextJs\"></div><div class=\"tooltip w-[40px] ml-6\" data-tip=\"Tailwind\"><img src=\"/img/tailwind.svg\" alt=\"Tailwind\"></div><div class=\"tooltip w-[40px] ml-6\" data-tip=\"Bootstrap\"><img src=\"/img/bootstrap.svg\" alt=\"Bootstrap\"></div><div class=\"tooltip w-[40px] ml-6\" data-tip=\"Scss\"><img src=\"/img/scss.svg\" alt=\"Scss\"></div></div></div><div class=\"py-6\"><h4 class=\"pb-6 font-title md:text-xl\">")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
 		var templ_7745c5c3_Var27 string
 		templ_7745c5c3_Var27, templ_7745c5c3_Err = templ.JoinStringErrs(texts["BackendDevelopment"])
 		if templ_7745c5c3_Err != nil {
-			return templ.Error{Err: templ_7745c5c3_Err, FileName: `internal/templates/partials/home_main.templ`, Line: 256, Col: 76}
+			return templ.Error{Err: templ_7745c5c3_Err, FileName: `internal/templates/partials/home_main.templ`, Line: 250, Col: 76}
 		}
 		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var27))
 		if templ_7745c5c3_Err != nil {
@@ -364,7 +364,7 @@ func HomeMain(texts map[string]string, links dto.InfoData, testimonials map[stri
 		var templ_7745c5c3_Var28 string
 		templ_7745c5c3_Var28, templ_7745c5c3_Err = templ.JoinStringErrs(texts["CloudInfra"])
 		if templ_7745c5c3_Err != nil {
-			return templ.Error{Err: templ_7745c5c3_Err, FileName: `internal/templates/partials/home_main.templ`, Line: 282, Col: 68}
+			return templ.Error{Err: templ_7745c5c3_Err, FileName: `internal/templates/partials/home_main.templ`, Line: 276, Col: 68}
 		}
 		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var28))
 		if templ_7745c5c3_Err != nil {
@@ -377,7 +377,7 @@ func HomeMain(texts map[string]string, links dto.InfoData, testimonials map[stri
 		var templ_7745c5c3_Var29 string
 		templ_7745c5c3_Var29, templ_7745c5c3_Err = templ.JoinStringErrs(texts["Testimonials"])
 		if templ_7745c5c3_Err != nil {
-			return templ.Error{Err: templ_7745c5c3_Err, FileName: `internal/templates/partials/home_main.templ`, Line: 305, Col: 30}
+			return templ.Error{Err: templ_7745c5c3_Err, FileName: `internal/templates/partials/home_main.templ`, Line: 299, Col: 30}
 		}
 		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var29))
 		if templ_7745c5c3_Err != nil {
@@ -390,7 +390,7 @@ func HomeMain(texts map[string]string, links dto.InfoData, testimonials map[stri
 		var templ_7745c5c3_Var30 string
 		templ_7745c5c3_Var30, templ_7745c5c3_Err = templ.JoinStringErrs(testimonials["Testimonial01Date"])
 		if templ_7745c5c3_Err != nil {
-			return templ.Error{Err: templ_7745c5c3_Err, FileName: `internal/templates/partials/home_main.templ`, Line: 316, Col: 74}
+			return templ.Error{Err: templ_7745c5c3_Err, FileName: `internal/templates/partials/home_main.templ`, Line: 310, Col: 74}
 		}
 		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var30))
 		if templ_7745c5c3_Err != nil {
@@ -403,7 +403,7 @@ func HomeMain(texts map[string]string, links dto.InfoData, testimonials map[stri
 		var templ_7745c5c3_Var31 string
 		templ_7745c5c3_Var31, templ_7745c5c3_Err = templ.JoinStringErrs(testimonials["Testimonial01Text01"])
 		if templ_7745c5c3_Err != nil {
-			return templ.Error{Err: templ_7745c5c3_Err, FileName: `internal/templates/partials/home_main.templ`, Line: 321, Col: 46}
+			return templ.Error{Err: templ_7745c5c3_Err, FileName: `internal/templates/partials/home_main.templ`, Line: 315, Col: 46}
 		}
 		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var31))
 		if templ_7745c5c3_Err != nil {
@@ -416,7 +416,7 @@ func HomeMain(texts map[string]string, links dto.InfoData, testimonials map[stri
 		var templ_7745c5c3_Var32 string
 		templ_7745c5c3_Var32, templ_7745c5c3_Err = templ.JoinStringErrs(testimonials["Testimonial01Text02"])
 		if templ_7745c5c3_Err != nil {
-			return templ.Error{Err: templ_7745c5c3_Err, FileName: `internal/templates/partials/home_main.templ`, Line: 324, Col: 46}
+			return templ.Error{Err: templ_7745c5c3_Err, FileName: `internal/templates/partials/home_main.templ`, Line: 318, Col: 46}
 		}
 		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var32))
 		if templ_7745c5c3_Err != nil {
@@ -429,7 +429,7 @@ func HomeMain(texts map[string]string, links dto.InfoData, testimonials map[stri
 		var templ_7745c5c3_Var33 string
 		templ_7745c5c3_Var33, templ_7745c5c3_Err = templ.JoinStringErrs(testimonials["Testimonial02Date"])
 		if templ_7745c5c3_Err != nil {
-			return templ.Error{Err: templ_7745c5c3_Err, FileName: `internal/templates/partials/home_main.templ`, Line: 335, Col: 74}
+			return templ.Error{Err: templ_7745c5c3_Err, FileName: `internal/templates/partials/home_main.templ`, Line: 329, Col: 74}
 		}
 		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var33))
 		if templ_7745c5c3_Err != nil {
@@ -442,7 +442,7 @@ func HomeMain(texts map[string]string, links dto.InfoData, testimonials map[stri
 		var templ_7745c5c3_Var34 string
 		templ_7745c5c3_Var34, templ_7745c5c3_Err = templ.JoinStringErrs(testimonials["Testimonial02Text01"])
 		if templ_7745c5c3_Err != nil {
-			return templ.Error{Err: templ_7745c5c3_Err, FileName: `internal/templates/partials/home_main.templ`, Line: 340, Col: 46}
+			return templ.Error{Err: templ_7745c5c3_Err, FileName: `internal/templates/partials/home_main.templ`, Line: 334, Col: 46}
 		}
 		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var34))
 		if templ_7745c5c3_Err != nil {
@@ -455,7 +455,7 @@ func HomeMain(texts map[string]string, links dto.InfoData, testimonials map[stri
 		var templ_7745c5c3_Var35 string
 		templ_7745c5c3_Var35, templ_7745c5c3_Err = templ.JoinStringErrs(testimonials["Testimonial03Date"])
 		if templ_7745c5c3_Err != nil {
-			return templ.Error{Err: templ_7745c5c3_Err, FileName: `internal/templates/partials/home_main.templ`, Line: 351, Col: 74}
+			return templ.Error{Err: templ_7745c5c3_Err, FileName: `internal/templates/partials/home_main.templ`, Line: 345, Col: 74}
 		}
 		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var35))
 		if templ_7745c5c3_Err != nil {
@@ -468,7 +468,7 @@ func HomeMain(texts map[string]string, links dto.InfoData, testimonials map[stri
 		var templ_7745c5c3_Var36 string
 		templ_7745c5c3_Var36, templ_7745c5c3_Err = templ.JoinStringErrs(testimonials["Testimonial03Text01"])
 		if templ_7745c5c3_Err != nil {
-			return templ.Error{Err: templ_7745c5c3_Err, FileName: `internal/templates/partials/home_main.templ`, Line: 356, Col: 46}
+			return templ.Error{Err: templ_7745c5c3_Err, FileName: `internal/templates/partials/home_main.templ`, Line: 350, Col: 46}
 		}
 		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var36))
 		if templ_7745c5c3_Err != nil {
@@ -481,7 +481,7 @@ func HomeMain(texts map[string]string, links dto.InfoData, testimonials map[stri
 		var templ_7745c5c3_Var37 string
 		templ_7745c5c3_Var37, templ_7745c5c3_Err = templ.JoinStringErrs(testimonials["Testimonial03Text02"])
 		if templ_7745c5c3_Err != nil {
-			return templ.Error{Err: templ_7745c5c3_Err, FileName: `internal/templates/partials/home_main.templ`, Line: 359, Col: 46}
+			return templ.Error{Err: templ_7745c5c3_Err, FileName: `internal/templates/partials/home_main.templ`, Line: 353, Col: 46}
 		}
 		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var37))
 		if templ_7745c5c3_Err != nil {
@@ -494,7 +494,7 @@ func HomeMain(texts map[string]string, links dto.InfoData, testimonials map[stri
 		var templ_7745c5c3_Var38 string
 		templ_7745c5c3_Var38, templ_7745c5c3_Err = templ.JoinStringErrs(texts["Contact"])
 		if templ_7745c5c3_Err != nil {
-			return templ.Error{Err: templ_7745c5c3_Err, FileName: `internal/templates/partials/home_main.templ`, Line: 369, Col: 25}
+			return templ.Error{Err: templ_7745c5c3_Err, FileName: `internal/templates/partials/home_main.templ`, Line: 363, Col: 25}
 		}
 		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var38))
 		if templ_7745c5c3_Err != nil {
@@ -525,7 +525,7 @@ func HomeMain(texts map[string]string, links dto.InfoData, testimonials map[stri
 		var templ_7745c5c3_Var41 string
 		templ_7745c5c3_Var41, templ_7745c5c3_Err = templ.JoinStringErrs(texts["Name"])
 		if templ_7745c5c3_Err != nil {
-			return templ.Error{Err: templ_7745c5c3_Err, FileName: `internal/templates/partials/home_main.templ`, Line: 392, Col: 116}
+			return templ.Error{Err: templ_7745c5c3_Err, FileName: `internal/templates/partials/home_main.templ`, Line: 386, Col: 116}
 		}
 		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var41))
 		if templ_7745c5c3_Err != nil {
@@ -538,7 +538,7 @@ func HomeMain(texts map[string]string, links dto.InfoData, testimonials map[stri
 		var templ_7745c5c3_Var42 string
 		templ_7745c5c3_Var42, templ_7745c5c3_Err = templ.JoinStringErrs(texts["Name"])
 		if templ_7745c5c3_Err != nil {
-			return templ.Error{Err: templ_7745c5c3_Err, FileName: `internal/templates/partials/home_main.templ`, Line: 393, Col: 77}
+			return templ.Error{Err: templ_7745c5c3_Err, FileName: `internal/templates/partials/home_main.templ`, Line: 387, Col: 77}
 		}
 		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var42))
 		if templ_7745c5c3_Err != nil {
@@ -551,7 +551,7 @@ func HomeMain(texts map[string]string, links dto.InfoData, testimonials map[stri
 		var templ_7745c5c3_Var43 string
 		templ_7745c5c3_Var43, templ_7745c5c3_Err = templ.JoinStringErrs(texts["Message"])
 		if templ_7745c5c3_Err != nil {
-			return templ.Error{Err: templ_7745c5c3_Err, FileName: `internal/templates/partials/home_main.templ`, Line: 400, Col: 122}
+			return templ.Error{Err: templ_7745c5c3_Err, FileName: `internal/templates/partials/home_main.templ`, Line: 394, Col: 122}
 		}
 		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var43))
 		if templ_7745c5c3_Err != nil {
@@ -564,7 +564,7 @@ func HomeMain(texts map[string]string, links dto.InfoData, testimonials map[stri
 		var templ_7745c5c3_Var44 string
 		templ_7745c5c3_Var44, templ_7745c5c3_Err = templ.JoinStringErrs(texts["Message"])
 		if templ_7745c5c3_Err != nil {
-			return templ.Error{Err: templ_7745c5c3_Err, FileName: `internal/templates/partials/home_main.templ`, Line: 401, Col: 77}
+			return templ.Error{Err: templ_7745c5c3_Err, FileName: `internal/templates/partials/home_main.templ`, Line: 395, Col: 77}
 		}
 		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var44))
 		if templ_7745c5c3_Err != nil {
@@ -577,7 +577,7 @@ func HomeMain(texts map[string]string, links dto.InfoData, testimonials map[stri
 		var templ_7745c5c3_Var45 string
 		templ_7745c5c3_Var45, templ_7745c5c3_Err = templ.JoinStringErrs(texts["SendMessage"])
 		if templ_7745c5c3_Err != nil {
-			return templ.Error{Err: templ_7745c5c3_Err, FileName: `internal/templates/partials/home_main.templ`, Line: 403, Col: 167}
+			return templ.Error{Err: templ_7745c5c3_Err, FileName: `internal/templates/partials/home_main.templ`, Line: 397, Col: 167}
 		}
 		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var45))
 		if templ_7745c5c3_Err != nil {
@@ -590,7 +590,7 @@ func HomeMain(texts map[string]string, links dto.InfoData, testimonials map[stri
 		var templ_7745c5c3_Var46 string
 		templ_7745c5c3_Var46, templ_7745c5c3_Err = templ.JoinStringErrs(texts["SuccessEmail"])
 		if templ_7745c5c3_Err != nil {
-			return templ.Error{Err: templ_7745c5c3_Err, FileName: `internal/templates/partials/home_main.templ`, Line: 411, Col: 47}
+			return templ.Error{Err: templ_7745c5c3_Err, FileName: `internal/templates/partials/home_main.templ`, Line: 405, Col: 47}
 		}
 		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var46))
 		if templ_7745c5c3_Err != nil {
@@ -603,7 +603,7 @@ func HomeMain(texts map[string]string, links dto.InfoData, testimonials map[stri
 		var templ_7745c5c3_Var47 string
 		templ_7745c5c3_Var47, templ_7745c5c3_Err = templ.JoinStringErrs(texts["SuccessEmailDescription"])
 		if templ_7745c5c3_Err != nil {
-			return templ.Error{Err: templ_7745c5c3_Err, FileName: `internal/templates/partials/home_main.templ`, Line: 412, Col: 56}
+			return templ.Error{Err: templ_7745c5c3_Err, FileName: `internal/templates/partials/home_main.templ`, Line: 406, Col: 56}
 		}
 		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var47))
 		if templ_7745c5c3_Err != nil {
